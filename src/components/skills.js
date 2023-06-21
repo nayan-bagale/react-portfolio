@@ -1,4 +1,4 @@
-export default function skills(){
+export default function Skills(){
     const skils = [
       {
         skill: "Node.js",
@@ -38,20 +38,28 @@ export default function skills(){
       }
     ];
     return (
-      <section className=" flex flex-col items-center min-h-screen justify-center w-2/3 m-auto">
-        <h1 className=" text-3xl">My Skills</h1>
+      <section
+        className=" flex flex-col items-center min-h-screen justify-center md:w-4/5 w-11/12 m-auto"
+        id="skills-section"
+      >
+        <div className="text-4xl p-4 my-4 self-start">
+          <h1 className=" pb-1 text-teal-700">My Skills</h1>
+          <div className=" border-b-2 w-full border-teal-700"></div>
+        </div>
         {skils.map((e) => {
-            return (
-              <div className=" flex flex-col w-full" key={e.skill}>
-                <div class="mb-1 text-base font-medium">{e.skill}</div>
-                <div class=" bg-slate-300 rounded-full h-2.5 mb-4">
-                  <div
-                    class="bg-blue-500 h-2.5 rounded-full "
-                    style={{width: e.level}}
-                  ></div>
-                </div>
+          return (
+            <div className=" flex flex-col md:w-4/5 w-11/12" key={e.skill}>
+              <div class="mb-1 text-base font-medium text-gray-800">
+                {e.skill}
               </div>
-            );
+              <div class=" bg-slate-300 rounded-full h-2.5 mb-4">
+                <div
+                  class="bg-blue-500 h-2.5 rounded-full "
+                  style={{ width: e.level }}
+                ></div>
+              </div>
+            </div>
+          );
         })}
       </section>
     );
