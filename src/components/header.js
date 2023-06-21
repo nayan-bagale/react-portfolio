@@ -39,10 +39,6 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
     }
   };
 
-  const mobilNav = () => {
-    return
-  }
-
   return (
     <header className=" z-10 top-0 fixed w-full backdrop-blur translate-y-0 transition duration-300 ease-in-out" ref={headerRef}>
       <nav className="py-8  flex justify-between items-center">
