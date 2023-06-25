@@ -44,14 +44,14 @@ const projects_info = [
 const Projects = () => {
     return (
       <section
-        className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto"
+        className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto items-center"
         id="projects-section"
       >
         <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
-          <h1 className=" pb-4 text-teal-800 sticky">Projects</h1>
-          <div className=" border w-[18%] border-teal-700"></div>
+          <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
+          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </div>
-        <div className=" w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 items-baseline justify-items-center">
+        <div className=" w-[90%] md:w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center">
           <Cards project={projects_info} />
         </div>
       </section>

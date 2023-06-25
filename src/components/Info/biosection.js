@@ -1,12 +1,20 @@
 import Image from "../../images/profile-pic.jpg";
+import {
+  AiOutlineGithub,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
+
+import { FaLinkedinIn } from "react-icons/fa";
+
 
 export default function Biosection() {
   return (
     <section
-      className=" min-h-screen pt-16 flex flex-col items-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
+      className=" min-h-screen pt-14 flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
       id="about-section"
     >
-      <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-10 overflow-hidden md:w-80 md:h-80">
+      <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full  w-56  h-56 mt-10 overflow-hidden md:w-80 md:h-80">
         <img src={Image} alt="profile-pic" />
       </div>
 
@@ -14,10 +22,10 @@ export default function Biosection() {
         <h1 className=" dark:text-white text-4xl md:text-5xl py-2 text-teal-600 font-medium">
           Nayan Bagale
         </h1>
-        <h3 className=" dark:text-gray-200 text-xl md:text-3xl py-2 text-gray-800">
+        <h3 className=" dark:text-yellow-400 text-xl md:text-3xl py-2 text-gray-800">
           I'm a Full Stack Web Developer
         </h3>
-        <p className=" dark:text-white text-base md:text-xl py-5 leading-8 text-gray-700 lg:w-3/4 ">
+        <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-700 lg:w-3/4 ">
           Developing web applications that are scalable, fast, reliable, easy to
           use and easy to maintain.
         </p>
@@ -27,6 +35,12 @@ export default function Biosection() {
         >
           Resume
         </a>
+
+        <div className=" flex justify-evenly py-5 lg:w-[80%] w-full">
+          <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+        </div>
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import { FiExternalLink } from "react-icons/fi";
+
 const Cards = ({ project }) => {
   return (
     <>
@@ -5,19 +7,19 @@ const Cards = ({ project }) => {
         return (
           <div
             key={index}
-            className=" flex flex-col w-full max-w-xl px-8 py-8 bg-white border rounded-lg shadow-md md:shadow-lg"
+            className=" flex flex-col items-start w-full max-w-xl px-8 py-8 bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800"
           >
-            <h1 className=" mb-2 text-2xl md:text-3xl text-teal-800 font-bold">
+            <h1 className=" mb-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
               {item.name}
             </h1>
-            <p className=" mb-4 text-sm md:text-base text-teal-700">
+            <p className=" mb-4 text-sm md:text-base text-teal-700 dark:text-teal-400">
               {item.detail}
             </p>
             <p className="px-4 pt-2 md:pt-4">
               {item.tags.map((item, index) => {
                 return (
                   <span
-                    className=" inline-block bg-gray-200 rounded-full px-3 py-1 text-xs md:text-sm font-semibold text-gray-600 mr-2 mb-2"
+                    className=" inline-block bg-gray-200  rounded-full px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-600 dark:text-gray-200"
                     key={index}
                   >
                     {`#${item}`}
@@ -25,15 +27,16 @@ const Cards = ({ project }) => {
                 );
               })}
             </p>
-            <hr className=" w-full h-0.5 mx-auto my-4 bg-teal-400 border-0 rounded md:my-6 " />
-            <div className=" flex justify-evenly">
+            <hr className=" w-full h-0.5 mx-auto my-4 bg-teal-400 border-0 rounded md:my-6 dark:bg-yellow-400 " />
+            <div className=" flex justify-evenly w-full">
               {item.demo ? (
                 <a
                   target="blank"
                   href={item.demo}
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-5 py-2 rounded-full"
+                  className=" inline-flex items-center md:text-base text-sm font-medium border-2 border-teal-400 text-teal-800 dark:border-gray-600 dark:text-yellow-400 px-5 py-2 rounded-full"
                 >
                   Demo
+                  <FiExternalLink className=" ml-1" />
                 </a>
               ) : (
                 ""
@@ -42,9 +45,9 @@ const Cards = ({ project }) => {
               <a
                 target="blank"
                 href={item.code}
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-5 py-2 rounded-full"
+                className=" md:text-base text-sm font-medium border-2 border-teal-400 text-teal-800 dark:border-gray-600 dark:text-yellow-400 px-5 py-2 rounded-full"
               >
-                Code
+                &#60; Code &#47;&#62;
               </a>
             </div>
           </div>

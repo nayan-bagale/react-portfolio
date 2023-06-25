@@ -45,42 +45,32 @@ import Dark from './dark';
       className=" z-10 top-0 fixed w-full backdrop-blur translate-y-0 transition duration-300 ease-in-out dark:text-white"
       ref={headerRef}
     >
-      <nav className="py-8  flex justify-between items-center">
-        <div className=" text-3xl flex justify-center gap-16 px-3 text-gray-600 md:text-5xl md:px-8 dark:text-white">
-          <AiFillGithub />
-        </div>
+      <nav className="py-8 flex justify-center ">
         <ul className=" flex items-stretch">
           <a
             href="#about"
             onClick={handleClick("about")}
-            className=" px-1.5 cursor-pointer hover:text-slate-500 md:px-4 md:text-xl"
+            className=" px-1.5 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 md:px-4 md:text-xl"
           >
-            About
+            Me
           </a>
           <a
             href="#skills"
             onClick={handleClick("skills")}
-            className=" px-1.5 cursor-pointer hover:text-slate-500 md:px-4 md:text-xl"
+            className=" px-1.5 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 md:px-4 md:text-xl"
           >
             Skills
           </a>
           <a
             href="#projects"
             onClick={handleClick("projects")}
-            className=" px-1.5 cursor-pointer hover:text-slate-500 md:px-4 md:text-xl"
+            className=" px-1.5 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 md:px-4 md:text-xl"
           >
             Projects
           </a>
-          <a
-            href="#blogs"
-            onClick={handleClick("blogs")}
-            className=" px-2 cursor-pointer hover:text-slate-500 md:px-4 md:text-xl"
-          >
-            Blogs
-          </a>
         </ul>
         <div
-          className=" text-2xl flex justify-center gap-16 px-3 text-gray-600 md:text-4xl md:px-8 dark:text-white"
+          className=" self-end text-2xl flex justify-center gap-16 px-3 text-gray-600 md:text-4xl md:px-8 dark:text-white"
           onClick={Dark()}
         >
           <BsFillMoonStarsFill className=" cursor-pointer" />
