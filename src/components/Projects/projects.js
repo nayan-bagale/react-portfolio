@@ -1,0 +1,61 @@
+import Cards from './cards'
+
+const projects_info = [
+  {
+    name: "ToDo List",
+    demo: "https://todo-nayanbagale.onrender.com/",
+    code: "https://github.com/nayan-bagale/ToDo",
+    detail:
+      "A simple ToDo responsive website that lets users add their tasks, mark them as completed, and can delete tasks, It also has user token-based authentication to sync their ToDo's.",
+    tags: ["JQuery", "HTML5", "CSS3", "Node.js", "MongoDB"],
+  },
+  {
+    name: "Hotel Management System",
+    demo: null,
+    code: "https://github.com/nayan-bagale/Hotel-Management-System-MySQL",
+    detail: "",
+    tags: ["MySQL", "Express.js", "Node.js", "JQuery", "HTML5", "CSS3"],
+  },
+  {
+    name: "FitGirl",
+    demo: "https://nayan-bagale.github.io/Fitgirl-Scraper/",
+    code: "https://github.com/nayan-bagale/Fitgirl-Scraper",
+    detail: "",
+    tags: [
+      "Cheerio",
+      "CORS",
+      "Node.js",
+      "Express.js",
+      "JQuery",
+      "HTML5",
+      "TailwindCSS",
+    ],
+  },
+  {
+    name: "Movie-X",
+    demo: "https://moviex-nayan-bagale.netlify.app/",
+    code: "https://github.com/nayan-bagale/movie-x",
+    detail:
+      "Movie-X is a website that let users search, for what movie they want to see and the information about the movie like story, actors, director, and genre. Also, user can see the rating.",
+    tags: ["React.js", "Tailwind CSS"],
+  },
+];
+
+const Projects = () => {
+    return (
+      <section
+        className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto"
+        id="projects-section"
+      >
+        <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
+          <h1 className=" pb-4 text-teal-800 sticky">Projects</h1>
+          <div className=" border w-[18%] border-teal-700"></div>
+        </div>
+        <div className=" w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 items-baseline justify-items-center">
+          <Cards project={projects_info} />
+        </div>
+      </section>
+    );
+}
+
+export default Projects;
