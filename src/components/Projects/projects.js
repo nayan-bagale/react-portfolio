@@ -51,7 +51,7 @@ const Projects = () => {
           <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </div>
-        <div className=" w-[90%] md:w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-center">
+        <div className=" w-[90%] md:w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-baseline md:items-center">
           <Cards project={projects_info} />
         </div>
       </section>

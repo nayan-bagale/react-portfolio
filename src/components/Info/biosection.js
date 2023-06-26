@@ -1,11 +1,11 @@
 import Image from "../../images/profile-pic.jpg";
 import {
   AiOutlineGithub,
-  AiOutlineLinkedin,
   AiOutlineTwitter,
 } from "react-icons/ai";
-
 import { FaLinkedinIn } from "react-icons/fa";
+
+import { TypeAnimation } from "react-type-animation";
 
 
 export default function Biosection() {
@@ -23,7 +23,13 @@ export default function Biosection() {
           Nayan Bagale
         </h1>
         <h3 className=" dark:text-yellow-400 text-xl md:text-3xl py-2 text-gray-800">
-          I'm a Full Stack Web Developer
+          I'm a
+          <TypeAnimation
+            sequence={[
+              ` Full Stack Web Developer.`,
+            ]}
+            repeat={Infinity}
+          />
         </h3>
         <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-700 lg:w-3/4 ">
           Developing web applications that are scalable, fast, reliable, easy to

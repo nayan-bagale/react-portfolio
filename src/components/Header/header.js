@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { AiFillGithub } from "react-icons/ai";
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 
 import Dark from './dark';
