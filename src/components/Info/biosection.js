@@ -11,7 +11,7 @@ import { TypeAnimation } from "react-type-animation";
 export default function Biosection() {
   return (
     <section
-      className=" min-h-screen pt-14 flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
+      className=" min-h-screen flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
       id="about-section"
     >
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full  w-56  h-56 mt-10 overflow-hidden md:w-80 md:h-80">
@@ -22,11 +22,13 @@ export default function Biosection() {
         <h1 className=" dark:text-white text-4xl md:text-5xl py-2 text-teal-600 font-medium">
           Nayan Bagale
         </h1>
-        <h3 className=" dark:text-yellow-400 text-xl md:text-3xl py-2 text-gray-800">
+        <h3 className=" dark:text-yellow-400 text-lg md:text-3xl py-2 text-gray-800">
           I'm a
           <TypeAnimation
             sequence={[
               ` Full Stack Web Developer.`,
+              1000,
+              ''
             ]}
             repeat={Infinity}
           />
