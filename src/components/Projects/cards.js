@@ -28,6 +28,7 @@ const Cards = ({ project }) => {
             initial="hidden"
             whileInView="visible"
             transition="transition"
+            viewport={{once: true}}
           >
             <h1 className=" mb-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
               {item.name}
@@ -42,7 +43,7 @@ const Cards = ({ project }) => {
                     className=" inline-block bg-gray-200  rounded-full px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-600 dark:text-gray-200"
                     key={index}
                   >
-                    {`#${item}`}
+                    {item}
                   </span>
                 );
               })}

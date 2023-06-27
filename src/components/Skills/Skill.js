@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function skill({ array }) {
+export default function Skill({ array }) {
   return array.map(({ title, progress }, index) => {
     const skillsVarient = {
       hidden: {

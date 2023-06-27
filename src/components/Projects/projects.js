@@ -51,12 +51,12 @@ const Projects = () => {
     },
     visible: { y: 0, opacity: 1 },
     transition: { type: "spring", stiffness: 100, when: "beforeChildren" },
-    viewport: { amount: 0.1 },
+    viewport: { amount: 0.5, once: true },
   };
 
     return (
       <motion.section
-        className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto items-center"
+        className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto items-center my-20"
         id="projects-section"
         variants={projectVarient}
         initial='hidden'
