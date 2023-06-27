@@ -1,18 +1,28 @@
 import Image from "../../images/profile-pic.jpg";
-import {
-  AiOutlineGithub,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import { TypeAnimation } from "react-type-animation";
 
+import { motion } from "framer-motion";
 
 export default function Biosection() {
+  const bioVarient = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: { y: 0, opacity: 1 },
+  };
+
   return (
-    <section
+    <motion.section
       className=" min-h-screen flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
       id="about-section"
+      variants={bioVarient}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{once:true}}
     >
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full  w-56  h-56 mt-10 overflow-hidden md:w-80 md:h-80">
         <img src={Image} alt="profile-pic" />
@@ -25,11 +35,7 @@ export default function Biosection() {
         <h3 className=" dark:text-yellow-400 text-lg md:text-3xl py-2 text-gray-800">
           I'm a
           <TypeAnimation
-            sequence={[
-              ` Full Stack Web Developer.`,
-              1000,
-              ''
-            ]}
+            sequence={[` Full Stack Web Developer.`, 1000, ""]}
             repeat={Infinity}
           />
         </h3>
@@ -50,6 +56,6 @@ export default function Biosection() {
           <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

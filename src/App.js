@@ -1,8 +1,7 @@
 import Header from './components/Header/header'
 import Bio from './components/Info/biosection'
-import Skills from './components/Skills/skills'
+import Skills from './components/Skills/Skillsection'
 import Projects from './components/Projects/projects';
-import Scroll from './components/Scroll/scroll'
 
 import { motion } from 'framer-motion';
 
@@ -12,10 +11,8 @@ function App() {
   return (
     <motion.div
       className=" dark:bg-gray-900"
-      
     >
       <Header />
-      {/* <Scroll/> */}
       <Bio />
       <Skills />
       <Projects />

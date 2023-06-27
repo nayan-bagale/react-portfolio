@@ -1,13 +1,33 @@
 import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const Cards = ({ project }) => {
+
+  const cardVarient = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: { y: 0, opacity: 1 },
+    transition: { type: "spring", stiffness: 20 },
+  };
+
+  const buttonVarient = {
+    hover: { scale: 1.2 },
+    click: { scale: 0.8},
+  };
+
   return (
     <>
       {project.map((item, index) => {
         return (
-          <div
+          <motion.div
             key={index}
             className=" flex flex-col items-start w-full max-w-xl px-8 py-8 bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800"
+            variants={cardVarient}
+            initial="hidden"
+            whileInView="visible"
+            transition="transition"
           >
             <h1 className=" mb-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
               {item.name}
@@ -30,27 +50,33 @@ const Cards = ({ project }) => {
             <hr className=" w-full h-0.5 mx-auto my-4 bg-teal-400 border-0 rounded md:my-6 dark:bg-yellow-400 " />
             <div className=" flex justify-evenly w-full">
               {item.demo ? (
-                <a
+                <motion.a
                   target="blank"
                   href={item.demo}
                   className=" inline-flex items-center md:text-base text-sm font-medium border-2 border-teal-400 text-teal-800 dark:border-gray-600 dark:text-yellow-400 px-5 py-2 rounded-full"
+                  variants={buttonVarient}
+                  whileHover="hover"
+                  whileTap="click"
                 >
                   Demo
                   <FiExternalLink className=" ml-1" />
-                </a>
+                </motion.a>
               ) : (
                 ""
               )}
 
-              <a
+              <motion.a
                 target="blank"
                 href={item.code}
                 className=" md:text-base text-sm font-medium border-2 border-teal-400 text-teal-800 dark:border-gray-600 dark:text-yellow-400 px-5 py-2 rounded-full"
+                variants={buttonVarient}
+                whileHover="hover"
+                whileTap="click"
               >
                 &#60; Code &#47;&#62;
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </>
