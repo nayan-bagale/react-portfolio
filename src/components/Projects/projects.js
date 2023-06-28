@@ -1,5 +1,4 @@
 import Cards from './cards'
-import { motion } from 'framer-motion';
 
 const projects_info = [
   {
@@ -44,25 +43,10 @@ const projects_info = [
 
 const Projects = () => {
 
-  const projectVarient = {
-    hidden: {
-      y: 100,
-      opacity: 0,
-    },
-    visible: { y: 0, opacity: 1 },
-    transition: { type: "spring", stiffness: 100, when: "beforeChildren" },
-    viewport: { amount: 0.5, once: true },
-  };
-
     return (
-      <motion.section
+      <section
         className=" min-h-screen flex flex-col md:w-4/5 w-11/12 m-auto items-center my-20"
         id="projects-section"
-        variants={projectVarient}
-        initial='hidden'
-        whileInView='visible'
-        transition='transition'
-        viewport='viewport'
       >
         <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
           <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
@@ -71,7 +55,7 @@ const Projects = () => {
         <div className=" w-[90%] md:w-full space-y-8 grid grid-cols-1 md:grid-cols-2 gap-2 justify-items-center items-baseline md:items-center">
           <Cards project={projects_info} />
         </div>
-      </motion.section>
+      </section>
     );
 }
 
