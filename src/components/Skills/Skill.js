@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Child from "../Animation/Child";
 
 export default function Skill({ array }) {
   return array.map(({ title, progress }, index) => {
@@ -23,14 +24,15 @@ export default function Skill({ array }) {
     };
 
     return (
-      <motion.div
+      <div
         className="flex flex-col w-4/5 my-1 md:w-2/3 md:my-2"
         key={index}
-        variants={skillsVarient}
-        initial="hidden"
-        whileInView="visible"
-        transition="transition"
+        // variants={skillsVarient}
+        // initial="hidden"
+        // whileInView="visible"
+        // transition="transition"
       >
+        <Child>
         <div className=" text-2xl md:text-3xl my-2 md:my-4 text-teal-800 dark:text-teal-200">
           {title}
         </div>
@@ -50,7 +52,8 @@ export default function Skill({ array }) {
             <div className=" absolute  p-1 bg-slate-800  right-[-0.2rem] top-[-0.75rem] rotate-45"></div>
           </motion.div>
         </div>
-      </motion.div>
+        </Child>
+      </div>
     );
   });
 }

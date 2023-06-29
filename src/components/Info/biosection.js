@@ -20,6 +20,9 @@ export default function Biosection() {
       className=" min-h-screen flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
       id="about-section"
       variants={bioVarient}
+      initial='hidden'
+      animate='visible'
+      transition={{ type: "tween", duration: 1.5, delay: 3 }}
     >
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full  w-56  h-56 mt-10 overflow-hidden md:w-80 md:h-80">
         <img src={Image} alt="profile-pic" />

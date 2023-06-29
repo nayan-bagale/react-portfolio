@@ -13,11 +13,8 @@ const Cards = ({ project }) => {
     <>
       {project.map((item, index) => {
         return (
-          <Child>
-            <div
-              key={index}
-              className=" flex flex-col items-start w-full max-w-xl px-8 py-8 bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800"
-            >
+          <Child key={index}>
+            <div className=" flex flex-col items-start w-full max-w-xl px-8 py-8 bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800">
               <h1 className=" mb-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
                 {item.name}
               </h1>

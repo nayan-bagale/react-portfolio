@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
 
-export default function Child({children}) {
+export default function Child({children}, props) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true})
 
@@ -16,7 +16,7 @@ export default function Child({children}) {
     },[isInView])
 
   return (
-    <div ref={ref}>
+    <div ref={ref} key={props.key || null}>
       <motion.div
         variants={{
           hidden: {
@@ -28,7 +28,7 @@ export default function Child({children}) {
         initial="hidden"
         whileInView='visible'
         transition={{ duration: 0.4, type: "tween" }}
-        viewport={{ once: false, amount: 0.4}}
+        viewport={{ once: true, amount: 0.4}}
       >
         {children}
       </motion.div>

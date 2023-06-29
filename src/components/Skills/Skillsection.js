@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Profient from "./Profient";
 import Skill from "./Skill";
+import Parent from '../Animation/Parent'
 
 export default function Skills() {
 
@@ -43,27 +44,27 @@ export default function Skills() {
     ];
 
   return (
-    <motion.section
-      className="relative flex flex-col items-center min-h-screen justify-center md:w-4/5 w-11/12 m-auto"
-      id="skills-section"
-      variants={sectionVarient}
-      initial="hidden"
-      whileInView="visible"
-      viewport="viewport"
-      transition="transition"
-    >
-      <div className="text-3xl md:text-4xl p-4 my-4 self-start">
-        <h1 className=" pb-4 text-teal-800 dark:text-white">
-          I’m proficient at
-        </h1>
-        <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
-      </div>
-      <Profient array={proficientArray} />
-      <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
-        <h1 className=" pb-4 text-teal-800 dark:text-white">Skills</h1>
-        <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
-      </div>
-      <Skill array={skillsArray} />
-    </motion.section>
+    
+      <section
+        className="relative flex flex-col items-center min-h-screen justify-center md:w-4/5 w-11/12 m-auto"
+        id="skills-section"
+      >
+        <div className="text-3xl md:text-4xl p-4 my-4 self-start">
+        <Parent>
+          <h1 className=" pb-4 text-teal-800 dark:text-white">
+            I’m proficient at
+          </h1>
+          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
+        </Parent>
+        </div>
+        <Profient array={proficientArray} />
+        <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
+        <Parent>
+          <h1 className=" pb-4 text-teal-800 dark:text-white">Skills</h1>
+          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
+        </Parent>
+        </div>
+        <Skill array={skillsArray} />
+      </section>
   );
 }

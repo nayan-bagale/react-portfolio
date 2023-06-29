@@ -20,7 +20,7 @@ export default function Reveal({children}) {
       <motion.div
         variants={{
           hidden: {
-            y: 100,
+            y: 75,
             opacity: 0,
           },
           visible: { y: 0, opacity: 1 },
