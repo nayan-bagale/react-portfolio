@@ -29,7 +29,15 @@ export default function Biosection() {
       </div>
 
       <div className=" m-4 p-4 flex flex-col items-start text-left md:w-1/2 md:p-8 md:m-8 ">
-        <h4 className=" dark:text-white text-2xl text-right ">Hi, 👋</h4>
+        <h4 className=" dark:text-white text-2xl text-right inline-flex ">
+          Hi,
+          <motion.div
+            animate={{ rotate: [-10, 0, -10] }}
+            transition={{ repeat: 1, duration: 0.5, delay:10 }}
+          >
+            👋
+          </motion.div>
+        </h4>
         <h1 className=" dark:text-white text-4xl md:text-5xl py-2 text-teal-600 font-medium">
           Nayan Bagale
         </h1>
