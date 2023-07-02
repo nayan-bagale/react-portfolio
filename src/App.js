@@ -6,6 +6,8 @@ import Contactme from "./components/contact-me/Contactme";
 import Footer from "./components/Footer/Footer";
 import Parent from "./components/Animation/Parent";
 import Loading from "./components/Loading/loading";
+import Back from "./components/Background/Back";
+import { ThemeProvider } from "./components/ContexAPI/Theme";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -18,20 +20,24 @@ function App() {
   }, []);
 
   return (
-    <div className=" dark:bg-gray-900">
+    <div>
       <Loading loading={loading} />
-      <Header />
-      <Bio />
-      <Parent>
-        <Skills />
-      </Parent>
-      <Parent>
-        <Projects />
-      </Parent>
-      <Parent>
-        <Contactme />
-      </Parent>
-      <Footer />
+      <ThemeProvider>
+        <Header />
+        <Bio />
+        <Parent>
+          <Skills />
+        </Parent>
+        <Parent>
+          <Projects />
+        </Parent>
+        <Parent>
+          <Contactme />
+        </Parent>
+        <Footer />
+
+        <Back />
+      </ThemeProvider>
     </div>
   );
 }

@@ -23,3 +23,30 @@ code {
   transition-duration: height 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #191a29;
+}
+
+.background-dark {
+  background: rgb(17,24,39);
+  background: linear-gradient(0deg, rgba(17,24,39,1) 50%, rgba(17,24,39,0.9047280844155844) 100%);
+}
+
+.background-light {
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(201,201,201,0.9047280844155844) 100%);
+}

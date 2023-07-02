@@ -27,7 +27,8 @@ export default function Reveal({children}) {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ type: "spring", stiffness: 20, when: "beforeChildren" }}
+        // transition={{ type: "spring", stiffness: 20, when: "beforeChildren" }}
+        transition={{ duration: 0.8, type: "tween", when: "beforeChildren" }}
       >
         {children}
       </motion.div>

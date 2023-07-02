@@ -27,7 +27,7 @@ export default function Child({children}, props) {
         }}
         initial="hidden"
         whileInView='visible'
-        transition={{ duration: 0.4, type: "tween" }}
+        transition={{ duration: 0.8, type: "tween" }}
         viewport={{ once: true, amount: 0.4}}
       >
         {children}

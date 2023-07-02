@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function Biosection() {
   const bioVarient = {
     hidden: {
-      y: -100,
+      y: -75,
       opacity: 0,
     },
     visible: { y: 0, opacity: 1 },
@@ -17,18 +17,19 @@ export default function Biosection() {
 
   return (
     <motion.section
-      className=" min-h-screen flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
+      className=" min-h-screen z-40 flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
       id="about-section"
       variants={bioVarient}
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       transition={{ type: "tween", duration: 1.5, delay: 3 }}
     >
-      <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full  w-56  h-56 mt-10 overflow-hidden md:w-80 md:h-80">
+      <div className=" mx-auto bg-gradient-to-b from-teal-500 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
         <img src={Image} alt="profile-pic" />
       </div>
 
-      <div className=" m-4 p-4 flex flex-col items-center text-center md:items-start md:text-left md:w-1/2 md:p-8 md:m-8 ">
+      <div className=" m-4 p-4 flex flex-col items-start text-left md:w-1/2 md:p-8 md:m-8 ">
+        <h4 className=" dark:text-white text-2xl text-right ">Hi, 👋</h4>
         <h1 className=" dark:text-white text-4xl md:text-5xl py-2 text-teal-600 font-medium">
           Nayan Bagale
         </h1>
@@ -49,7 +50,6 @@ export default function Biosection() {
         >
           Resume
         </a>
-
         <div className=" flex justify-evenly py-5 lg:w-[80%] w-full">
           <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
           <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
