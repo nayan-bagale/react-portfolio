@@ -6,14 +6,36 @@ import { CgWebsite } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-import {useTheme} from "../ContexAPI/Theme";
+import { useTheme } from "../ContexAPI/Theme";
 
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
+
+function useOutsideAlerter(ref, navtoggle, setNavToggle) {
+  useEffect(() => {
+    if (!navtoggle) return;
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        // eslint-disable-next-line
+        setNavToggle(false);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+    // eslint-disable-next-line
+  }, [navtoggle, ref]);
+}
 
 function Header() {
   const [navtoggle, setNavToggle] = useState(false);
 
-  const {toggleTheme} = useTheme();
+  const { toggleTheme } = useTheme();
 
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
@@ -26,16 +48,21 @@ function Header() {
     }
   };
 
+  const ref = useRef(null);
+
+  useOutsideAlerter(ref, navtoggle, setNavToggle);
+
   return (
-    <header className=" flex z-10 top-0 items-center justify-center fixed w-full transition duration-300 ease-in-out dark:text-white">
-      <nav className=" flex justify-end w-full ">
+    <header className=" flex z-10 top-0 right-0 items-center justify-end fixed transition duration-300 ease-in-out dark:text-white">
+      <nav className=" flex justify-end">
         <motion.div
           className=" flex flex-col items-center backdrop-blur p-2 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-white rounded-full"
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ type: "tween", duration: 1.5, delay: 3 }}
+          ref={ref}
         >
-          <button onClick={() => setNavToggle(!navtoggle)}>
+          <button onClick={() => setNavToggle((prev) => !prev)}>
             {navtoggle ? (
               <AiOutlineClose className=" text-2xl md:text-4xl" />
             ) : (
@@ -72,6 +99,7 @@ function Header() {
               >
                 <FaRegPaperPlane />
               </a>
+              <hr className=" w-full my-2 dark:border-white border-black" />
               <div
                 className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
                 onClick={toggleTheme}
