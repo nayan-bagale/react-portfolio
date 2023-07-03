@@ -24,8 +24,8 @@ export default function Biosection() {
       animate="visible"
       transition={{ type: "tween", duration: 1.5, delay: 3 }}
     >
-      <div className=" mx-auto bg-gradient-to-b from-teal-500 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
-        <img src={Image} alt="profile-pic" />
+      <div className=" mx-auto border-4 dark:border-yellow-400 border-emerald-400 p-2 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
+        <img src={Image} alt="profile-pic" className=" rounded-full" />
       </div>
 
       <div className=" m-4 p-4 flex flex-col items-start text-left md:w-1/2 md:p-8 md:m-8 ">
@@ -33,7 +33,7 @@ export default function Biosection() {
           Hi,
           <motion.div
             animate={{ rotate: [-10, 0, -10] }}
-            transition={{ repeat: 1, duration: 0.5, delay:10 }}
+            transition={{ repeat: 1, duration: 0.5, delay: 10 }}
           >
             👋
           </motion.div>

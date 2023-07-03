@@ -56,7 +56,7 @@ function Header() {
     <header className=" flex z-10 top-0 right-0 items-center justify-end fixed transition duration-300 ease-in-out dark:text-white">
       <nav className=" flex justify-end">
         <motion.div
-          className=" flex flex-col items-center backdrop-blur p-2 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-white rounded-full"
+          className=" flex flex-col items-center backdrop-blur p-2 py-3 md:py-4 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-slate-100 rounded-full"
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ type: "tween", duration: 1.5, delay: 3 }}

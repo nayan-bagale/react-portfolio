@@ -6,7 +6,7 @@ export default function loading({ loading }) {
     <AnimatePresence>
       {
         <motion.div
-          className=" z-20 fixed grid place-items-center dark:bg-gray-900 min-h-screen w-full"
+          className=" z-20 fixed grid place-items-center bg-white dark:bg-gray-900 min-h-screen w-full"
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,

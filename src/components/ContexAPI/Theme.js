@@ -6,19 +6,28 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    const localTheme = JSON.parse(localStorage.getItem("Theme"));
+    if (localTheme) {
+      setTheme(localTheme);
+    } 
+      // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      //   setTheme("dark");
+      //   localStorage.setItem("Theme", JSON.stringify("dark"));
+      //   console.log(localTheme);
+      // } else {
+      //   setTheme("light");
+      //   localStorage.setItem("Theme", JSON.stringify("dark"));
+      // }
+    
   }, []);
 
   useEffect(() => {
-    console.log(theme)
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("Theme", JSON.stringify(theme));
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("Theme", JSON.stringify(theme));
     }
   }, [theme]);
 
@@ -35,30 +44,3 @@ export const ThemeProvider = ({ children }) => {
 };
 
 export const useTheme = () => useContext(ThemeContext);
-
-// const Dark = () => {
-//   const [theme, setTheme] = useState(null);
-
-//   useEffect(() => {
-//     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//       setTheme('dark') ;
-//     }else{
-//       setTheme('light');
-//     }
-//   }, []);
-
-
-//   useEffect(() => {
-//     if (theme === "dark") {
-//       document.documentElement.classList.add("dark");
-//     } else {
-//       document.documentElement.classList.remove("dark");
-//     }
-//   }, [theme]);
-
-//   return () => {
-//     setTheme(theme === "dark" ? "light" : "dark");
-//   };
-// };
-
-// export default Dark;

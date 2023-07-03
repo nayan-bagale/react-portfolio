@@ -3,7 +3,7 @@ import { useTheme } from "../ContexAPI/Theme";
 
 function Back() {
     const { theme } = useTheme();
-    console.log(theme)
+
     let background = theme === 'light' ? 'background-light' : "background-dark";
   return (
     <>
