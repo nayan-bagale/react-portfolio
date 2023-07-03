@@ -1,20 +1,20 @@
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Profient from "./Profient";
 import Skill from "./Skill";
 import Parent from '../Animation/Parent'
 
 export default function Skills() {
 
-  const sectionVarient = {
-    hidden: {
-      y: 100,
-      opacity: 0,
-    },
-    visible: { y: 0, opacity: 1 },
-    transition: { type:'spring', stiffness: 100, when:"beforeChildren" },
-    viewport: { amount: 0.1 },
+  // const sectionVarient = {
+  //   hidden: {
+  //     y: 100,
+  //     opacity: 0,
+  //   },
+  //   visible: { y: 0, opacity: 1 },
+  //   transition: { type:'spring', stiffness: 100, when:"beforeChildren" },
+  //   viewport: { amount: 0.1 },
 
-  };
+  // };
 
   const skillsArray = [
     {

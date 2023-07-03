@@ -1,4 +1,7 @@
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 import { BsArrowRight } from "react-icons/bs";
 import Child from "../Animation/Child";
 import { useTheme } from "../ContexAPI/Theme";
@@ -7,10 +10,27 @@ import { useTheme } from "../ContexAPI/Theme";
 export default function Contactme() {
     const { theme } = useTheme();
 
-  const handlesubmit = (e) => {
-    e.preventDefault();
+  const handlesubmit = (values) => {
     alert("success");
   };
+
+    const formik = useFormik({
+      initialValues: {
+        firstName: "",
+        email: "",
+        comment: "",
+      },
+      onSubmit: (values) => {
+        handlesubmit(values);
+      },
+      validationSchema: Yup.object({
+        firstName: Yup.string().required("Required"),
+        email: Yup.string().email("Invalid email").required("Required"),
+        comment: Yup.string()
+          .min(10, "Atleast 10 characters")
+          .required("Required"),
+      }),
+    });
 
   return (
     <section
@@ -36,6 +56,7 @@ export default function Contactme() {
               type="text"
               name="name"
               placeholder=" "
+              {...formik.getFieldProps("firstName")}
               required
             />
             <label
@@ -53,6 +74,7 @@ export default function Contactme() {
               name="email"
               placeholder=" "
               required
+              {...formik.getFieldProps("email")}
               className="block py-2.5 px-0 w-full text-base md:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-slate-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-slate-600 focus:dark:border-yellow-600 peer"
             />
             <label
@@ -69,6 +91,7 @@ export default function Contactme() {
               name="message"
               placeholder=" "
               rows={5}
+              {...formik.getFieldProps("comment")}
               className="block py-2.5 px-0 w-full text-base md:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-slate-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-slate-600 focus:dark:border-yellow-600 peer"
             ></textarea>
             <label
@@ -82,6 +105,7 @@ export default function Contactme() {
         <Child>
           <button
             type="submit"
+            disabled={true}
             className=" inline-flex items-center text-2xl bg-slate-600 text-white p-2 rounded-full"
           >
             <BsArrowRight />

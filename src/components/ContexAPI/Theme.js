@@ -9,7 +9,9 @@ export const ThemeProvider = ({ children }) => {
     const localTheme = JSON.parse(localStorage.getItem("Theme"));
     if (localTheme) {
       setTheme(localTheme);
-    } 
+    }else{
+      setTheme('light')
+    }
       // if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       //   setTheme("dark");
       //   localStorage.setItem("Theme", JSON.stringify("dark"));
