@@ -1,4 +1,4 @@
-import { FiExternalLink } from "react-icons/fi";
+// import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Child from "../Animation/Child";
 
@@ -32,7 +32,7 @@ const Cards = ({ project }) => {
                   {item.tags.map((item, index) => {
                     return (
                       <span
-                        className=" inline-block bg-gray-200  rounded-full px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-600 dark:text-gray-200"
+                        className=" inline-block bg-gray-200 rounded-full px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-600 dark:text-gray-200"
                         key={index}
                       >
                         {item}
@@ -41,13 +41,13 @@ const Cards = ({ project }) => {
                   })}
                 </p>
                 {/* <hr className=" w-full h-0.5 mx-auto my-4 bg-teal-400 border-0 rounded md:my-6 dark:bg-yellow-400 " /> */}
-                <div className=" flex justify-between w-full mt-4">
+                <div className=" flex w-full justify-between mt-4">
                   {item.demo ? (
                     <motion.a
                       target="blank"
                       href={item.demo}
                       // className=" inline-flex items-center md:text-base text-sm font-medium border-2 border-teal-400 text-teal-800 dark:border-gray-600 dark:text-yellow-400 px-5 py-2 rounded-full"
-                      className=" inline-flex items-center md:text-xl text-base font-bold text-teal-800 dark:border-gray-600 dark:text-teal-200"
+                      className=" items-center md:text-xl text-base font-bold text-teal-800 dark:border-gray-600 dark:text-teal-200"
                       variants={buttonVarient}
                       whileTap="click"
                     >
@@ -61,7 +61,7 @@ const Cards = ({ project }) => {
                   <motion.a
                     target="blank"
                     href={item.code}
-                    className=" md:text-xl text-base font-bold text-teal-800 dark:border-gray-600 dark:text-teal-600 dark:hover:text-white"
+                    className=" justify-self-end md:text-xl text-base font-bold text-teal-600 dark:border-gray-600 dark:text-teal-600 dark:hover:text-white"
                     variants={buttonVarient}
                     whileTap="click"
                   >

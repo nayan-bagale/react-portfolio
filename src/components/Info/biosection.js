@@ -24,7 +24,7 @@ export default function Biosection() {
       animate="visible"
       transition={{ type: "tween", duration: 1.5, delay: 3 }}
     >
-      <div className=" mx-auto border-4 dark:border-yellow-400 border-emerald-400 p-2 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
+      <div className=" mx-auto border-4 dark:border-gray-600 border-emerald-400 p-2 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
         <img src={Image} alt="profile-pic" className=" rounded-full" />
       </div>
 

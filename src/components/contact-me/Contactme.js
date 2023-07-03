@@ -23,8 +23,9 @@ export default function Contactme() {
       </div>
 
       <div className=" w-4/5 my-0 md:w-2/3 md:my-6 dark:text-gray-300 text-lg text-justify py-3 md:text-2xl md:py-5 leading-8 text-gray-700">
-        i would {theme === 'light' ? '❤️' : '🤍'} to hear about your projects and how i could help. Please
-        message me and i'll get back to you as soon as possible.
+        i would {theme === "light" ? "🧡" : "🤍"} to hear about your projects
+        and how i could help. Please message me and i'll get back to you as soon
+        as possible.
       </div>
 
       <form onSubmit={handlesubmit} className=" w-4/5 my-4 md:w-2/3 md:my-6">
