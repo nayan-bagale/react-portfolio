@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function loading({ loading }) {
+export default function loading() {
   return (
     <AnimatePresence>
       {

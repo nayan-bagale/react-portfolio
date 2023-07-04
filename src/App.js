@@ -13,15 +13,15 @@ import { useEffect, useState } from "react";
 function App() {
   // const Hr = () => {return(<hr class=" w-1/2 md:w-1/3 h-1 mx-auto my-4 bg-teal-600 border-0 rounded md:my-10 "/>)}
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 9000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 9000);
+  // }, []);
 
   return (
     <div>
-      <Loading loading={loading} />
+      <Loading />
       <ThemeProvider>
         <Header />
         <Bio />
@@ -34,7 +34,9 @@ function App() {
         <Parent>
           <Contactme />
         </Parent>
-        <Footer />
+        <Parent>
+          <Footer />
+        </Parent>
         <Back />
       </ThemeProvider>
     </div>
