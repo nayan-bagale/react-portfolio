@@ -1,36 +1,55 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import { BsArrowRight } from "react-icons/bs";
+import { AiOutlineStop } from "react-icons/ai";
 import Child from "../Animation/Child";
 import { useTheme } from "../ContexAPI/Theme";
 
+import emailjs from "@emailjs/browser";
 
 export default function Contactme() {
-    const { theme } = useTheme();
+  const { theme } = useTheme();
 
-  const handlesubmit = (values) => {
-    alert("success");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+     e.preventDefault();
+     
+    emailjs
+      .sendForm(
+        "service_gmchrbj",
+        "template_ch99kya",
+        form.current,
+        "PBQ0fRnDn6iDGd0cY"
+      )
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+     formik.resetForm();
   };
 
-    const formik = useFormik({
-      initialValues: {
-        firstName: "",
-        email: "",
-        comment: "",
-      },
-      onSubmit: (values) => {
-        handlesubmit(values);
-      },
-      validationSchema: Yup.object({
-        firstName: Yup.string().required("Required"),
-        email: Yup.string().email("Invalid email").required("Required"),
-        comment: Yup.string()
-          .min(10, "Atleast 10 characters")
-          .required("Required"),
-      }),
-    });
+  const formik = useFormik({
+    validateOnMount: true,
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email").required("Required"),
+      message: Yup.string()
+        .min(10, "Atleast 10 characters")
+        .required("Required"),
+    }),
+  });
 
   return (
     <section
@@ -44,11 +63,15 @@ export default function Contactme() {
 
       <div className=" w-4/5 my-0 md:w-2/3 md:my-6 dark:text-gray-300 text-lg text-justify py-3 md:text-2xl md:py-5 leading-8 text-gray-700">
         i would {theme === "light" ? "🧡" : "🤍"} to hear about your projects
-        and how i could help. Please message me and i'll get back to you as soon
-        as possible.
+        and how i could help. want to collaborate on a project, or just want to
+        say hi, don't hesitate to reach out 😁.
       </div>
 
-      <form onSubmit={handlesubmit} className=" w-4/5 my-4 md:w-2/3 md:my-6">
+      <form
+      ref={form}
+        onSubmit={sendEmail}
+        className=" w-11/12 my-4 md:w-3/5 p-4 md:my-6 rounded-lg bg-white/80 dark:bg-slate-800/80"
+      >
         <Child>
           <div className="relative z-0 w-full mb-6 group">
             <input
@@ -56,7 +79,7 @@ export default function Contactme() {
               type="text"
               name="name"
               placeholder=" "
-              {...formik.getFieldProps("firstName")}
+              {...formik.getFieldProps("name")}
               required
             />
             <label
@@ -65,6 +88,11 @@ export default function Contactme() {
             >
               Name
             </label>
+            {formik.touched.name && formik.errors.name ? (
+              <div className=" absolute text-xs mt-1 right-0 text-red-500">
+                {formik.errors.name}
+              </div>
+            ) : null}
           </div>
         </Child>
         <Child>
@@ -83,6 +111,11 @@ export default function Contactme() {
             >
               Email
             </label>
+            {formik.touched.email && formik.errors.email ? (
+              <div className=" absolute text-xs mt-1 right-0 text-red-500">
+                {formik.errors.email}
+              </div>
+            ) : null}
           </div>
         </Child>
         <Child>
@@ -91,7 +124,7 @@ export default function Contactme() {
               name="message"
               placeholder=" "
               rows={5}
-              {...formik.getFieldProps("comment")}
+              {...formik.getFieldProps("message")}
               className="block py-2.5 px-0 w-full text-base md:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-slate-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-yellow-400 focus:outline-none focus:ring-0 focus:border-slate-600 focus:dark:border-yellow-600 peer"
             ></textarea>
             <label
@@ -100,15 +133,20 @@ export default function Contactme() {
             >
               Message
             </label>
+            {formik.touched.message && formik.errors.message ? (
+              <div className=" absolute text-xs mt-1 right-0 text-red-500">
+                {formik.errors.message}
+              </div>
+            ) : null}
           </div>
         </Child>
         <Child>
           <button
             type="submit"
-            disabled={true}
-            className=" inline-flex items-center text-2xl bg-slate-600 text-white p-2 rounded-full"
+            disabled={!formik.isValid}
+            className=" inline-flex items-center disabled:cursor-not-allowed text-2xl bg-slate-600 text-white p-2 rounded-full"
           >
-            <BsArrowRight />
+            {formik.isValid ? <BsArrowRight /> : <AiOutlineStop />}
           </button>
         </Child>
       </form>

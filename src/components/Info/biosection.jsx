@@ -59,9 +59,15 @@ export default function Biosection() {
           Resume
         </a>
         <div className=" flex justify-evenly py-5 lg:w-[80%] w-full">
-          <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
-          <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
-          <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          <a href="https://github.com/nayan-bagale" target="blank">
+            <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          </a>
+          <a href="https://www.linkedin.com/in/nayan-bagale" target="blank">
+            <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          </a>
+          <a href="https://twitter.com/nayan_bagale" target="blank">
+            <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
+          </a>
         </div>
       </div>
     </motion.section>

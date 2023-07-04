@@ -44,9 +44,13 @@ export default function Profient({ array }) {
                 onClick={() => handleClick(index)}
               >
                 <h1 className=" text-2xl md:text-3xl">{title}</h1>
-                <motion.div 
-                whileInView={ collapsetoggle !== index ? {y:[0,5,0,5,0]} : {y:[0]}}
-                transition={{duration: 5, repeat:Infinity, ease: 'linear'}}
+                <motion.div
+                  whileInView={
+                    collapsetoggle !== index
+                      ? { y: [0, 5, 0, 5, 0] }
+                      : { y: [0] }
+                  }
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
                   {collapsetoggle === index ? (
                     <AiOutlineUp className=" text-2xl md:text-3xl text-teal-800 dark:text-teal-200 transition duration-200 ease-in-out " />
@@ -54,7 +58,7 @@ export default function Profient({ array }) {
                     <AiOutlineUp className=" text-2xl md:text-3xl text-teal-800 dark:text-teal-200 scale-y-[-1] transition duration-200 ease-in-out" />
                   )}
                 </motion.div>
-                <div className=" bottom-[-0.75rem] border w-full absolute dark:border-yellow-400"></div>
+                <div className=" bottom-[-0.75rem] border w-full absolute border-slate-400 dark:border-yellow-400"></div>
               </div>
               <Collapse isOpened={collapsetoggle === index}>
                 <p className=" text-md md:text-xl py-6 text-teal-600 dark:text-teal-400">
