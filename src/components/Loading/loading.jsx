@@ -14,7 +14,7 @@ export default function loading() {
           }}
           transition={{
             type: "tween",
-            duration: 2.5,
+            duration: 0.5,
             delay: 3,
           }}
         >

@@ -22,7 +22,7 @@ export default function Biosection() {
       variants={bioVarient}
       initial="hidden"
       animate="visible"
-      transition={{ type: "tween", duration: 1.5, delay: 3 }}
+      transition={{ type: "tween", duration: 1, delay: 3 }}
     >
       <div className=" mx-auto border-4 dark:border-gray-600 border-emerald-400 p-2 rounded-full w-52 h-52 mt-10 overflow-hidden md:w-72 md:h-72">
         <img src={Image} alt="profile-pic" className=" rounded-full" />
@@ -33,7 +33,7 @@ export default function Biosection() {
           Hi,
           <motion.div
             animate={{ rotate: [-10, 0, -10] }}
-            transition={{ repeat: 1, duration: 0.5, delay: 10 }}
+            transition={{ repeat: 1, duration: 0.5, delay: 5 }}
           >
             👋
           </motion.div>

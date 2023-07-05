@@ -59,7 +59,7 @@ function Header() {
           className=" flex flex-col items-center backdrop-blur p-2 py-3 md:py-4 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-slate-100 rounded-full"
           initial={{ x: 100 }}
           animate={{ x: 0 }}
-          transition={{ type: "tween", duration: 1.5, delay: 3 }}
+          transition={{ type: "tween", duration: 1, delay: 3 }}
           ref={ref}
         >
           <button onClick={() => setNavToggle((prev) => !prev)}>
