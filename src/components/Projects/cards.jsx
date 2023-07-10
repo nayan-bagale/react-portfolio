@@ -14,13 +14,13 @@ const Cards = ({ project }) => {
         return (
           <Child key={index}>
             <div className=" flex flex-col items-start w-full max-w-xl bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800">
-              <div>
+              {/* <div>
                 <img
                   className=" rounded-lg"
                   src={item.img}
                   alt="todo"
                 />
-              </div>
+              </div> */}
               <div className=" px-5 pb-5">
                 <h1 className=" my-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
                   {item.name}

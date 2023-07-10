@@ -22,7 +22,7 @@ function Experience() {
       </div>
 
       {/* Bottom SVG */}
-      <div className="absolute bottom-[-3.12rem] md:bottom-[-6.25rem] left-0 w-full leading-none rotate-180">
+      <div className="absolute bottom-[-3.12rem] md:bottom-[-6.2343rem] left-0 w-full leading-none rotate-180">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

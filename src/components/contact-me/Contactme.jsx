@@ -9,14 +9,17 @@ import { useTheme } from "../ContexAPI/Theme";
 
 import emailjs from "@emailjs/browser";
 
+import toast, { Toaster } from "react-hot-toast";
+  
+
 export default function Contactme() {
   const { theme } = useTheme();
-
+  
   const form = useRef();
-
-  const sendEmail = (e) => {
-     e.preventDefault();
-     
+  
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const toastId = toast.loading('Sending...');
     emailjs
       .sendForm(
         "service_gmchrbj",
@@ -27,9 +30,15 @@ export default function Contactme() {
       .then(
         (result) => {
           console.log(result);
+          toast.success("Succeed", {
+            id: toastId,
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.error("Internal Error Occure", {
+            id: toastId,
+          });
         }
       );
      formik.resetForm();
@@ -54,7 +63,7 @@ export default function Contactme() {
   return (
     <section
       id="contact-section"
-      className=" min-h-screen lg:w-3/5 md:w-4/5 w-11/12 m-auto flex flex-col items-center justify-center dark:text-white"
+      className=" relative min-h-screen lg:w-3/5 md:w-4/5 w-11/12 m-auto flex flex-col items-center justify-center dark:text-white"
     >
       <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
         <h1 className=" pb-4 text-teal-800 dark:text-white">Contact</h1>
@@ -68,9 +77,9 @@ export default function Contactme() {
       </div>
 
       <form
-      ref={form}
+        ref={form}
         onSubmit={sendEmail}
-        className=" w-11/12 my-4 md:w-3/5 p-4 md:my-6 rounded-lg bg-white/80 dark:bg-slate-800/80"
+        className=" w-11/12 my-4 md:w-3/5 p-4 md:my-6 rounded-lg "
       >
         <Child>
           <div className="relative z-0 w-full mb-6 group">
@@ -149,6 +158,28 @@ export default function Contactme() {
             {formik.isValid ? <BsArrowRight /> : <AiOutlineStop />}
           </button>
         </Child>
+        <Toaster
+          toastOptions={{
+            loading: {
+              style: {
+                background: theme === "light" ? "white" : "rgb(31 41 55)",
+                color: theme === "light" ? "black" : "white",
+              },
+            },
+            success: {
+              style: {
+                background: theme === "light" ? "white" : "rgb(31 41 55)",
+                color: theme === "light" ? "black" : "white",
+              },
+            },
+            error: {
+              style: {
+                background: theme === "light" ? "white" : "rgb(31 41 55)",
+                color: theme === "light" ? "black" : "white",
+              },
+            },
+          }}
+        />
       </form>
     </section>
   );

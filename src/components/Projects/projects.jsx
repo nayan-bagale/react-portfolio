@@ -51,7 +51,7 @@ const projects_info = [
 const Projects = () => {
   return (
     <section
-      className=" relative bg-white/80 dark:bg-slate-800/80 min-h-screen flex flex-col w-full items-center my-20 pb-10"
+      className=" relative bg-white/80 dark:bg-gray-800/80 min-h-screen flex flex-col w-full items-center my-20 pb-10"
       id="projects-section"
     >
       {/* Top SVG */}
