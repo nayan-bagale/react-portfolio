@@ -75,13 +75,10 @@ function Experience() {
                 Full Stack Developer
               </h2>
               <p className=" text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
-                {/* Delivering algorithmic solutions all the way from the concept
-                level to production. Work usually starts with writing an
-                algorithm that solves the customer's problem in some high-level
-                language, framework, or library ( Node.js, GraphQL, tRPC ) and
-                ends with efficient code thay runs in Microservices architecture
-                base scalable production servers or carefully integrated with
-                embedded systems. */}
+                <ul className="list-disc">
+                  <li>Built a webpage by collaborating with team members.</li>
+                  <li>Using Next.js, Tailwind.</li>
+                </ul>
               </p>
             </div>
           </Child>
