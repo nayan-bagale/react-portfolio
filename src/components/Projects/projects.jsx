@@ -4,29 +4,29 @@ import Cards from "./cards";
 const projects_info = [
   {
     name: "ToDo List",
-    img: require("../../images/todo.jpeg"),
+    // img: require("../../images/todo.jpeg"),
     demo: "https://todo-nayanbagale.onrender.com/",
     code: "https://github.com/nayan-bagale/ToDo",
     detail:
-      "A simple ToDo responsive website that lets users add their tasks, mark them as completed, and can delete tasks, It also has user token-based authentication to sync their ToDo's.",
+      "A simple ToDo responsive webapp 📝 that lets users add ➕ their tasks, mark them as completed ✔️, and can delete 🗑️ tasks, It also has user token-based authentication to sync their ToDo's.",
     tags: ["JQuery", "HTML5", "CSS3", "Node.js", "MongoDB"],
   },
+
   {
-    name: "Hotel Management System",
-    img: require("../../images/hotel.jpeg"),
-    demo: null,
-    code: "https://github.com/nayan-bagale/Hotel-Management-System-MySQL",
+    name: "Movie-X",
+    // img: require("../../images/movie-x.jpeg"),
+    demo: "https://moviex-nayan-bagale.netlify.app/",
+    code: "https://github.com/nayan-bagale/movie-x",
     detail:
-      "Hotel Management System web app lets hotel staff to manage overall hotels system. Staff can book or reserve the room, also it shows which room is available their checkIn checkOut time.",
-    tags: ["MySQL", "Express.js", "Node.js", "JQuery", "HTML5", "CSS3"],
+      "Movie-X 🎞️ is a website that let users search🔎 , for what movie they want to see and the information about the movie like story, actors, director, and genre. Also, user can see the rating⭐.",
+    tags: ["React.js", "Tailwind CSS"],
   },
   {
     name: "FitGirl",
-    img: require("../../images/fitgirl.jpeg"),
+    // img: require("../../images/fitgirl.jpeg"),
     demo: "https://nayan-bagale.github.io/Fitgirl-Scraper/",
     code: "https://github.com/nayan-bagale/Fitgirl-Scraper",
-    detail:
-      `FitGirl is a clone of fitgirl-repacks.site where new recently cracked games are available, Users can search game's title and filter it by genre, each game card has a link to the fitgirl download page.`,
+    detail: `FitGirl is a clone of fitgirl-repacks.site where new recently cracked games 🎮 are available, Users can search 🔎 game's title and filter it by genre, each game card has a link to the fitgirl download page.`,
     tags: [
       "Cheerio",
       "CORS",
@@ -38,20 +38,20 @@ const projects_info = [
     ],
   },
   {
-    name: "Movie-X",
-    img: require("../../images/movie-x.jpeg"),
-    demo: "https://moviex-nayan-bagale.netlify.app/",
-    code: "https://github.com/nayan-bagale/movie-x",
+    name: "Hotel Management System",
+    // img: require("../../images/hotel.jpeg"),
+    demo: null,
+    code: "https://github.com/nayan-bagale/Hotel-Management-System-MySQL",
     detail:
-      "Movie-X is a website that let users search, for what movie they want to see and the information about the movie like story, actors, director, and genre. Also, user can see the rating.",
-    tags: ["React.js", "Tailwind CSS"],
+      "Hotel Management System 🏨 web app lets hotel staff to manage overall hotels system. Staff can book 🛎️ or reserve the room 🛏️, also it shows which room is available their checkIn checkOut time.",
+    tags: ["MySQL", "Express.js", "Node.js", "JQuery", "HTML5", "CSS3"],
   },
 ];
 
 const Projects = () => {
   return (
     <section
-      className=" relative bg-white/80 dark:bg-gray-800/80 min-h-screen flex flex-col w-full items-center my-20 pb-10"
+      className=" relative bg-white/80 dark:bg-slate-800/80 min-h-screen flex flex-col w-full items-center my-20 pb-10"
       id="projects-section"
     >
       {/* Top SVG */}
@@ -91,6 +91,7 @@ const Projects = () => {
           ></path>
         </svg>
       </div>
+      
       <div className=" md:w-4/5 w-11/12 m-auto flex flex-col items-center">
         <div className=" text-3xl md:text-4xl p-4 mt-4 self-start">
           <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
@@ -99,11 +100,11 @@ const Projects = () => {
 
         <Child>
           <div className=" relative rounded my-0 md:w-2/3 md:my-6 p-4 mb-4 m-auto">
-            <p className=" dark:text-gray-300 text-lg text-justify py-3 md:text-2xl md:py-5 leading-6 md:leading-8 text-gray-700">
-              Learning by doing things is the best way to grasp concepts so
-              whenever I learn something I try to build an app to understand its
+            <p className=" dark:text-gray-300 text-base py-3 md:text-2xl md:py-5 leading-6 md:leading-8 text-gray-700">
+              Learning by doing things 🧑🏻‍💻 is the best way to grasp concepts so
+              whenever I learn something I try to build 🏗️ an app to understand its
               importance and how things have to be configured. Here are some of
-              the personal projects I have worked on in the past
+              the personal projects I have worked on in the past 👻.
             </p>
             {/* <div className=" bg-slate-800 opacity-80 rounded-lg w-full h-[100%] absolute top-0 left-0 -z-10 shadow-lg"></div> */}
           </div>

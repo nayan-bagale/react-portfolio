@@ -1,9 +1,10 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { FaRegPaperPlane } from "react-icons/fa";
-import { Collapse } from "react-collapse";
 import { CgWebsite } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
+
+import { Collapse } from "react-collapse";
 import { motion } from "framer-motion";
 
 import { useTheme } from "../ContexAPI/Theme";
@@ -79,6 +80,14 @@ function Header() {
                 Me
               </a>
               <a
+                href="#experience"
+                onClick={handleClick("experience")}
+                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-xl md:text-2xl"
+              >
+                ex
+              </a>
+
+              <a
                 href="#skills"
                 onClick={handleClick("skills")}
                 className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-base md:py-4 md:text-xl"
@@ -109,15 +118,6 @@ function Header() {
             </ul>
           </Collapse>
         </motion.div>
-        {/* <motion.div
-          className=" right-4 absolute m-4 text-2xl items-center bg-slate-400 p-2 md:p-4 rounded-full text-gray-600 md:text-4xl dark:text-white"
-          onClick={Theme()}
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ type: "tween", duration: 1.5, delay: 3 }}
-        >
-          <BsFillMoonStarsFill className=" cursor-pointer" />
-        </motion.div> */}
       </nav>
     </header>
   );

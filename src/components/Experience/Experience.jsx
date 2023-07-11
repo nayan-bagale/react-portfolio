@@ -1,7 +1,11 @@
+import Child from "../Animation/Child";
 
 function Experience() {
   return (
-    <section className=" relative min-h-screen bg-white/80 dark:bg-slate-800/80 flex flex-col w-full items-center my-20 pb-10">
+    <section
+      className=" relative min-h-fit bg-white/80 dark:bg-slate-800/80 flex flex-col w-full items-center my-20 pb-10"
+      id="experience-section"
+    >
       {/* Top SVG */}
       <div className=" absolute top-[-3.12rem] md:top-[-6.25rem] left-0 w-full leading-none rotate-180">
         <svg
@@ -39,8 +43,53 @@ function Experience() {
           ></path>
         </svg>
       </div>
+
+      <div className="relative flex flex-col items-center md:w-4/5 w-11/12 m-auto">
+        <div className="text-3xl md:text-4xl p-4 my-4 self-start">
+          <h1 className=" pb-4 text-teal-800 dark:text-white">Experience</h1>
+          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
+        </div>
+        <div className=" relative flex flex-col w-4/5 my-4 md:w-2/3 md:my-6">
+          {/* Side line */}
+          <div className=" absolute border-l h-full -left-2 top-0 border-l-teal-800 dark:border-l-white"></div>
+          {/* End */}
+
+          {/* Experience Info Card */}
+          <Child>
+            <div className=" rounded-3xl relative flex flex-col gap-2 md:gap-4 text-white ml-4 md:ml-8 p-6 md:p-12 w-fit dark:bg-gray-900 bg-emerald-200">
+              <div className=" p-4 md:p-6 dark:bg-gray-900 bg-emerald-200 absolute rotate-45 left-[-0.9rem] md:left-[-1.5rem] top-[10%] md:top-[15%]"></div>
+
+              <h3 className=" italic text-xl md:text-2xl absolute left-[-3.9rem] md:left-[-5.2rem] top-[30%] -rotate-90 text-teal-700 dark:text-teal-400">
+                Intern
+              </h3>
+
+              <div className=" flex gap-4 items-center justify-between">
+                <h1 className=" text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200">
+                  Edifition
+                </h1>
+                <h3 className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200">
+                  2023-Present
+                </h3>
+              </div>
+              <h2 className=" text-2xl md:text-4xl text-teal-800 font-semibold dark:text-teal-200">
+                Full Stack Developer
+              </h2>
+              <p className=" text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
+                {/* Delivering algorithmic solutions all the way from the concept
+                level to production. Work usually starts with writing an
+                algorithm that solves the customer's problem in some high-level
+                language, framework, or library ( Node.js, GraphQL, tRPC ) and
+                ends with efficient code thay runs in Microservices architecture
+                base scalable production servers or carefully integrated with
+                embedded systems. */}
+              </p>
+            </div>
+          </Child>
+          {/* End */}
+        </div>
+      </div>
     </section>
   );
 }
 
-export default Experience
+export default Experience;

@@ -18,30 +18,30 @@ export default function Skills() {
 
   const skillsArray = [
     {
-      title: "Node.js",
-      progress: "95%",
-    },
-    {
-      title: "React.js",
+      title: "TypeScript",
       progress: "60%",
     },
     {
-      title: "Express.js",
-      progress: "80%",
+      title: "React.js",
+      progress: "90%",
+    },
+    {
+      title: "JavaScript",
+      progress: "95%",
     },
   ];
 
   const proficientArray = [
-      {
-        title: "Front-End",
-        skills: "ES6, React.js, Tailwind CSS, JavaScript, HTML5, CSS3",
-      },
-      {
-        title: "Back-End",
-        skills:
-          "Node.js, Express.js, Python, MongoDB, MySQL, API, Version Control (e.g. Git) ",
-      },
-    ];
+    {
+      title: "Front-End",
+      skills: "ES6, React.js, Next.js, Tailwind, JavaScript, HTML5, CSS3",
+    },
+    {
+      title: "Back-End",
+      skills:
+        "Node.js, Express.js, MongoDB, MySQL, API, Version Control (e.g. Git) ",
+    },
+  ];
 
   return (
     

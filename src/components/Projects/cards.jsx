@@ -13,7 +13,7 @@ const Cards = ({ project }) => {
       {project.map((item, index) => {
         return (
           <Child key={index}>
-            <div className=" flex flex-col items-start w-full max-w-xl bg-white border rounded-lg shadow-md md:shadow-lg dark:shadow-black dark:border-gray-800 dark:bg-gray-800">
+            <div className=" rounded-3xl flex flex-col items-start w-full max-w-xl bg-emerald-200 border shadow border-none dark:bg-gray-900">
               {/* <div>
                 <img
                   className=" rounded-lg"
@@ -21,7 +21,7 @@ const Cards = ({ project }) => {
                   alt="todo"
                 />
               </div> */}
-              <div className=" px-5 pb-5">
+              <div className=" px-5 py-5">
                 <h1 className=" my-2 text-2xl md:text-3xl text-teal-800 font-bold dark:text-teal-200">
                   {item.name}
                 </h1>
@@ -32,7 +32,7 @@ const Cards = ({ project }) => {
                   {item.tags.map((item, index) => {
                     return (
                       <span
-                        className=" inline-block bg-gray-200 rounded-full px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-600 dark:text-gray-200"
+                        className=" inline-block rounded-xl bg-emerald-100 px-3 py-1 text-xs md:text-sm text-gray-600 mr-2 mb-2 dark:bg-gray-800 dark:text-gray-200"
                         key={index}
                       >
                         {item}

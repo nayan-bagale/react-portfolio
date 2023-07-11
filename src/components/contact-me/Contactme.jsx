@@ -70,10 +70,10 @@ export default function Contactme() {
         <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
       </div>
 
-      <div className=" w-4/5 my-0 md:w-2/3 md:my-6 dark:text-gray-300 text-lg text-justify py-3 md:text-2xl md:py-5 leading-8 text-gray-700">
+      <div className=" w-4/5 my-0 md:w-2/3 md:my-6 dark:text-gray-300 text-base text-justify py-3 md:text-2xl md:py-5 leading-8 text-gray-700">
         i would {theme === "light" ? "🧡" : "🤍"} to hear about your projects
         and how i could help. want to collaborate on a project, or just want to
-        say hi, don't hesitate to reach out 😁.
+        say hi, don't hesitate to reach out 🤩.
       </div>
 
       <form
