@@ -26,7 +26,7 @@ export default function loading() {
         <motion.div
           className=" bottom-[1rem] border w-full absolute border-teal-800 dark:border-yellow-400"
           initial={{ x: 250 }}
-          animate={{ x: 0, transitionEnd:{ x: 250} }}
+          animate={{ x: 0 }}
           transition={{ type: "tween", duration: 1 }}
         ></motion.div>
       </motion.div>
