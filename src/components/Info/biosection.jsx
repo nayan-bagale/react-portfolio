@@ -44,7 +44,7 @@ export default function Biosection() {
         <h3 className=" dark:text-yellow-400 text-lg md:text-3xl py-2 text-gray-800">
           I'm a
           <TypeAnimation
-            sequence={[` Full Stack Web Developer.`, 1000, ""]}
+            sequence={[` Full Stack Developer.`, 1000, ""]}
             repeat={Infinity}
           />
         </h3>

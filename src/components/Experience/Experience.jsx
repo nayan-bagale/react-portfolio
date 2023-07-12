@@ -74,12 +74,10 @@ function Experience() {
               <h2 className=" text-2xl md:text-4xl text-teal-800 font-semibold dark:text-teal-200">
                 Full Stack Developer
               </h2>
-              <p className=" text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
-                <ul className="list-disc">
+                <ul className="list-disc text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
                   <li>Built a webpage by collaborating with team members.</li>
                   <li>Using Next.js, Tailwind.</li>
                 </ul>
-              </p>
             </div>
           </Child>
           {/* End */}
