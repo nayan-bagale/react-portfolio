@@ -18,14 +18,14 @@ export default function loading() {
     >
       <motion.div
         className=" relative h-16 dark:text-white text-4xl text-teal-600 overflow-hidden"
-        initial={{ y: 0, opacity: 1 }}
-        animate={{ y: -75, opacity: 0 }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
         transition={{ type: "tween", duration: 1, delay: 1 }}
       >
         Welcome
         <motion.div
           className=" bottom-[1rem] border w-full absolute border-teal-800 dark:border-yellow-400"
-          initial={{ x: 250 }}
+          initial={{ x: -250 }}
           animate={{ x: 0 }}
           transition={{ type: "tween", duration: 1 }}
         ></motion.div>
