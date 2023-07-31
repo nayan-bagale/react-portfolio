@@ -1,6 +1,7 @@
 import Image from "../../images/profile-pic.jpg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -29,36 +30,44 @@ export default function Biosection() {
       </div>
 
       <div className=" m-4 p-4 flex flex-col items-start text-left md:w-1/2 md:p-8 md:m-8 ">
-        <h4 className=" dark:text-white text-2xl text-right inline-flex ">
+        <h4 className=" dark:text-white text-teal-900 text-xl md:text-2xl text-right inline-flex ">
           Hi,
           <motion.div
-            animate={{ rotate: [-10, 0, -10] }}
+            animate={{ rotate: [0,-20, 0, -20, 0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 0.5, repeatDelay: 5 }}
           >
-            👋
+          👋
           </motion.div>
         </h4>
-        <h1 className=" dark:text-white text-4xl md:text-5xl py-2 text-teal-600 font-medium">
-          Nayan Bagale
+        <h1 className=" dark:text-white text-3xl md:text-5xl py-2 text-teal-700 font-semibold">
+          I'm Nayan Bagale.
         </h1>
-        <h3 className=" dark:text-yellow-400 text-lg md:text-3xl py-2 text-gray-800">
-          I'm a
+        <h3 className=" dark:text-yellow-400 text-xl md:text-3xl text-gray-800">
+          A
           <TypeAnimation
             sequence={[` Full Stack Developer.`, 1000, ""]}
             repeat={Infinity}
           />
         </h3>
-        <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-700 lg:w-3/4 ">
+        <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-600 lg:w-3/4 ">
           Developing web applications that are scalable, fast, reliable, easy to
           use and easy to maintain.
         </p>
-        <a
+        <motion.a
           href="https://drive.google.com/file/d/1xE0qbxef5LqeXr3Zl010rwQfJ-rG2-SA/view?usp=sharing"
           target="blank_"
-          className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-5 py-2 rounded-md"
+          className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-full flex items-center text-2xl "
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
-          Resume
-        </a>
+          <motion.div
+            animate={{ y: [0, 2, 0] }}
+            transition={{ repeat: Infinity, duration: 3 }}
+          >
+            <MdKeyboardDoubleArrowDown className="text-3xl" />
+          </motion.div>
+          CV
+        </motion.a>
         <div className=" flex justify-evenly py-5 lg:w-[80%] w-full">
           <a href="https://github.com/nayan-bagale" target="blank">
             <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
