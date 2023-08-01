@@ -16,6 +16,11 @@ export default function Biosection() {
     visible: { y: 0, opacity: 1 },
   };
 
+  const buttonVarient = {
+    whileHover: { scale: 1.1 },
+    whileTap: { scale: 0.8 },
+  };
+
   return (
     <motion.section
       className=" min-h-screen z-40 flex flex-col items-center justify-center md:flex-row-reverse lg:w-4/5 lg:m-auto md:pt-0 "
@@ -33,10 +38,10 @@ export default function Biosection() {
         <h4 className=" dark:text-white text-teal-900 text-xl md:text-2xl text-right inline-flex ">
           Hi,
           <motion.div
-            animate={{ rotate: [0,-20, 0, -20, 0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 0.5, repeatDelay: 5 }}
+            animate={{ rotate: [0, -20, 0, -20, 0, -20, 0] }}
+            transition={{ repeat: Infinity, duration: 0.5, repeatDelay: 3 }}
           >
-          👋
+            👋
           </motion.div>
         </h4>
         <h1 className=" dark:text-white text-3xl md:text-5xl py-2 text-teal-700 font-semibold">
@@ -57,8 +62,9 @@ export default function Biosection() {
           href="https://drive.google.com/file/d/1xE0qbxef5LqeXr3Zl010rwQfJ-rG2-SA/view?usp=sharing"
           target="blank_"
           className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-full flex items-center text-2xl "
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          variants={buttonVarient}
+          whileHover="whileHover"
+          whileTap="whileTap"
         >
           <motion.div
             animate={{ y: [0, 2, 0] }}
@@ -69,15 +75,33 @@ export default function Biosection() {
           CV
         </motion.a>
         <div className=" flex justify-evenly py-5 lg:w-[80%] w-full">
-          <a href="https://github.com/nayan-bagale" target="blank">
-            <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
-          </a>
-          <a href="https://www.linkedin.com/in/nayan-bagale" target="blank">
-            <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
-          </a>
-          <a href="https://twitter.com/nayan_bagale" target="blank">
-            <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 dark:text-white" />
-          </a>
+          <motion.a
+            href="https://github.com/nayan-bagale"
+            target="blank"
+            variants={buttonVarient}
+            whileHover="whileHover"
+            whileTap="whileTap"
+          >
+            <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/nayan-bagale"
+            target="blank"
+            variants={buttonVarient}
+            whileHover="whileHover"
+            whileTap="whileTap"
+          >
+            <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
+          </motion.a>
+          <motion.a
+            href="https://twitter.com/nayan_bagale"
+            target="blank"
+            variants={buttonVarient}
+            whileHover="whileHover"
+            whileTap="whileTap"
+          >
+            <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
+          </motion.a>
         </div>
       </div>
     </motion.section>

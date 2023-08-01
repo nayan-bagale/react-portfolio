@@ -3,15 +3,6 @@ import Cards from "./cards";
 
 const projects_info = [
   {
-    name: "Portfolio",
-    // img: require("../../images/todo.jpeg"),
-    // demo: "https://todo-nayanbagale.onrender.com/",
-    code: "https://github.com/nayan-bagale/ToDo",
-    detail:
-      "",
-    tags: ['Reactjs','Tailwind','Framer-Motion'],
-  },
-  {
     name: "ToDo List",
     // img: require("../../images/todo.jpeg"),
     demo: "https://todo-nayanbagale.onrender.com/",
