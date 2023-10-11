@@ -2,7 +2,9 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
+import { GrBlockQuote } from "react-icons/gr";
 import { AiOutlineClose } from "react-icons/ai";
+import { IoIosApps } from "react-icons/io";
 
 import { Collapse } from "react-collapse";
 import { motion } from "framer-motion";
@@ -41,10 +43,14 @@ function Header() {
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
+    let block = "center";
+    if (anchor === "projects") {
+      block = "start";
+    }
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: block,
       });
     }
   };
@@ -97,6 +103,20 @@ function Header() {
               <a
                 href="#projects"
                 onClick={handleClick("projects")}
+                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
+              >
+                <IoIosApps />
+              </a>
+              <a
+                href="#quotes"
+                onClick={handleClick("quotes")}
+                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
+              >
+                <GrBlockQuote />
+              </a>
+              <a
+                href="#blogs"
+                onClick={handleClick("blogs")}
                 className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
               >
                 <CgWebsite />

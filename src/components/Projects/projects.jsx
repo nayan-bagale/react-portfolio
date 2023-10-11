@@ -3,6 +3,22 @@ import Cards from "./cards";
 
 const projects_info = [
   {
+    name: "Quizy",
+    // img: require("../../images/todo.jpeg"),
+    demo: "https://react-quiz-app-nayan-orcin.vercel.app/",
+    code: "https://github.com/nayan-bagale/Quizy-React-App",
+    detail:
+      "Create, share, and track your quizzes effortlessly, quiz creators receive instant notifications with their name and scores, all powered by Firebase's 🔑 OAuth with Google, 📊 Firestore, and 📬 Cloud Messaging.📚🎉",
+    tags: [
+      "Firebase",
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "CORS",
+    ],
+  },
+  {
     name: "ToDo List",
     // img: require("../../images/todo.jpeg"),
     demo: "https://todo-nayanbagale.onrender.com/",
@@ -91,7 +107,7 @@ const Projects = () => {
           ></path>
         </svg>
       </div>
-      
+
       <div className=" md:w-4/5 w-11/12 m-auto flex flex-col items-center">
         <div className=" text-3xl md:text-4xl p-4 mt-4 self-start">
           <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
@@ -102,9 +118,9 @@ const Projects = () => {
           <div className=" relative rounded my-0 md:w-2/3 md:my-6 p-4 mb-4 m-auto">
             <p className=" dark:text-gray-300 text-base py-3 md:text-2xl md:py-5 leading-6 md:leading-8 text-gray-700">
               Learning by doing things 🧑🏻‍💻 is the best way to grasp concepts so
-              whenever I learn something I try to build 🏗️ an app to understand its
-              importance and how things have to be configured. Here are some of
-              the personal projects I have worked on in the past 👻.
+              whenever I learn something I try to build 🏗️ an app to understand
+              its importance and how things have to be configured. Here are some
+              of the personal projects I have worked on in the past 👻.
             </p>
             {/* <div className=" bg-slate-800 opacity-80 rounded-lg w-full h-[100%] absolute top-0 left-0 -z-10 shadow-lg"></div> */}
           </div>

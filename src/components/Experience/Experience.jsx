@@ -1,4 +1,5 @@
 import Child from "../Animation/Child";
+// import { motion } from "framer-motion";
 
 function Experience() {
   return (
@@ -47,7 +48,8 @@ function Experience() {
       <div className="relative flex flex-col items-center md:w-4/5 w-11/12 m-auto">
         <div className="text-3xl md:text-4xl p-4 my-4 self-start">
           <h1 className=" pb-4 text-teal-800 dark:text-white">Experience</h1>
-          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
+          <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"
+          ></div>
         </div>
         <div className=" relative flex flex-col w-4/5 my-4 md:w-2/3 md:my-6">
           {/* Side line */}
@@ -64,20 +66,20 @@ function Experience() {
               </h3>
 
               <div className=" flex gap-4 items-center justify-between">
-                <h1 className=" text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200">
+                <h1 className=" text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200 dark:bg-gray-800 bg-emerald-100 p-1 px-2 rounded-3xl">
                   Edifition
                 </h1>
-                <h3 className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200">
+                <h3 className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200 ">
                   2023-Present
                 </h3>
               </div>
               <h2 className=" text-2xl md:text-4xl text-teal-800 font-semibold dark:text-teal-200">
                 Full Stack Developer
               </h2>
-                <ul className="list-disc text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
-                  <li>Built a webpage by collaborating with team members.</li>
-                  <li>Using Next.js, Tailwind.</li>
-                </ul>
+              <ul className="list-disc text-sm md:text-lg leading-6 text-teal-700 dark:text-teal-400">
+                <li>Built a webpage by collaborating with team members.</li>
+                <li>Using Next.js, Tailwind, Framer-Motion.</li>
+              </ul>
             </div>
           </Child>
           {/* End */}
