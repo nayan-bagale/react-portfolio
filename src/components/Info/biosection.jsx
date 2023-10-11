@@ -39,7 +39,12 @@ export default function Biosection() {
           Hi,
           <motion.div
             animate={{ rotate: [0, -20, 0, -20, 0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 0.5, repeatDelay: 3 }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.5,
+              repeatDelay: 3,
+              delay: 1,
+            }}
           >
             👋
           </motion.div>
