@@ -78,6 +78,7 @@ function Header() {
           </button>
           <Collapse isOpened={navtoggle}>
             <ul className="flex flex-col items-center">
+              <hr className=" w-full my-2 dark:border-white border-black" />
               <a
                 href="#about"
                 onClick={handleClick("about")}
