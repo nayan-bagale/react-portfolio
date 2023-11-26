@@ -1,13 +1,10 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { HiMenuAlt4 } from "react-icons/hi";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { GrBlockQuote } from "react-icons/gr";
-import { AiOutlineClose } from "react-icons/ai";
 import { IoIosApps } from "react-icons/io";
 
-import { Collapse } from "react-collapse";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { useTheme } from "../ContexAPI/Theme";
 
@@ -59,86 +56,109 @@ function Header() {
 
   useOutsideAlerter(ref, navtoggle, setNavToggle);
 
-  return (
-    <header className=" flex z-10 top-0 right-0 items-center justify-end fixed transition duration-300 ease-in-out dark:text-white">
-      <nav className=" flex justify-end">
-        <motion.div
-          className=" flex flex-col items-center backdrop-blur p-2 py-3 md:py-4 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-slate-100 rounded-full"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ type: "tween", duration: 1, delay: 3 }}
-          ref={ref}
-        >
-          <button onClick={() => setNavToggle((prev) => !prev)}>
-            {navtoggle ? (
-              <AiOutlineClose className=" text-2xl md:text-4xl" />
-            ) : (
-              <HiMenuAlt4 className=" text-2xl md:text-4xl" />
-            )}
-          </button>
-          <Collapse isOpened={navtoggle}>
-            <ul className="flex flex-col items-center">
-              <a
-                href="#about"
-                onClick={handleClick("about")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-base md:py-4 md:text-xl"
-              >
-                Me
-              </a>
-              <a
-                href="#experience"
-                onClick={handleClick("experience")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-xl md:text-2xl"
-              >
-                ex
-              </a>
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-              <a
-                href="#skills"
-                onClick={handleClick("skills")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-base md:py-4 md:text-xl"
-              >
-                &#60; &#47;&#62;
-              </a>
-              <a
-                href="#projects"
-                onClick={handleClick("projects")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
-              >
-                <IoIosApps />
-              </a>
-              <a
-                href="#quotes"
-                onClick={handleClick("quotes")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
-              >
-                <GrBlockQuote />
-              </a>
-              <a
-                href="#blogs"
-                onClick={handleClick("blogs")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
-              >
-                <CgWebsite />
-              </a>
-              <a
-                href="#contact"
-                onClick={handleClick("contact")}
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
-              >
-                <FaRegPaperPlane />
-              </a>
-              <hr className=" w-full my-2 dark:border-white border-black" />
-              <div
-                className=" py-2 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:py-4 md:text-2xl"
-                onClick={toggleTheme}
-              >
-                <BsFillMoonStarsFill className=" cursor-pointer" />
-              </div>
-            </ul>
-          </Collapse>
-        </motion.div>
-      </nav>
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      // if scroll down hide the navbar
+      setShow(false);
+    } else {
+      // if scroll up show the navbar
+      setShow(true);
+    }
+
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
+
+  return (
+    <header className=" flex z-10 w-full items-center justify-center fixed transition duration-300 ease-in-out dark:text-white">
+      <AnimatePresence>
+        {show && (
+          <nav className="flex ">
+            <motion.div
+              className=" flex items-center backdrop-blur p-2 py-2 md:py-2 md:p-4 m-4 shadow-sm md:shadow dark:shadow-black shadow-slate-100 rounded-full"
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
+              exit={{ y: -100 }}
+              transition={{ type: "tween", duration: 0.5 }}
+              ref={ref}
+            >
+              <ul className="flex gap-2 items-center">
+                <a
+                  href="#about"
+                  onClick={handleClick("about")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-base  md:text-xl"
+                >
+                  Me
+                </a>
+                <a
+                  href="#experience"
+                  onClick={handleClick("experience")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-xl md:text-2xl"
+                >
+                  ex
+                </a>
+
+                <a
+                  href="#skills"
+                  onClick={handleClick("skills")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-base md:text-xl"
+                >
+                  &#60;&#47;&#62;
+                </a>
+                <a
+                  href="#projects"
+                  onClick={handleClick("projects")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:text-2xl"
+                >
+                  <IoIosApps />
+                </a>
+                <a
+                  href="#quotes"
+                  onClick={handleClick("quotes")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:text-2xl"
+                >
+                  <GrBlockQuote />
+                </a>
+                <a
+                  href="#blogs"
+                  onClick={handleClick("blogs")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:text-2xl"
+                >
+                  <CgWebsite />
+                </a>
+                <a
+                  href="#contact"
+                  onClick={handleClick("contact")}
+                  className=" py-0 px-1 cursor-pointer hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:text-2xl"
+                >
+                  <FaRegPaperPlane />
+                </a>
+              </ul>
+            </motion.div>
+          </nav>
+        )}
+      </AnimatePresence>
+
+      <div className="flex absolute backdrop-blur pl-1 w-12 md:w-16 bottom-0 -right-4 items-center justify-start shadow-sm md:shadow dark:shadow-black shadow-slate-100 rounded-full">
+        <div
+          className=" flex items-center justify-center cursor-pointer p-2 hover:text-slate-500 dark:hover:text-yellow-400 text-lg md:text-2xl"
+          onClick={toggleTheme}
+        >
+          <BsFillMoonStarsFill className=" cursor-pointer" />
+        </div>
+      </div>
     </header>
   );
 }
