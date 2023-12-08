@@ -44,7 +44,6 @@ export default function Biosection() {
               repeatDelay: 3,
               delay: 1,
             }}
-
           >
             👋
           </motion.div>
@@ -64,8 +63,7 @@ export default function Biosection() {
           use and easy to maintain.
         </p>
         <motion.a
-          href="https://drive.google.com/file/d/1xE0qbxef5LqeXr3Zl010rwQfJ-rG2-SA/view?usp=sharing"
-
+          href="https://drive.google.com/file/d/1Y1O5qwNPGPw-qAVIX0ICPvkWUUdi5iG0/view?usp=sharing"
           target="blank_"
           className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-full flex items-center text-2xl "
           variants={buttonVarient}
