@@ -16,10 +16,10 @@ export default function Biosection() {
     visible: { y: 0, opacity: 1 },
   };
 
-  const buttonVarient = {
-    whileHover: { scale: 1.1 },
-    whileTap: { scale: 0.8 },
-  };
+  // const buttonVarient = {
+  //   whileHover: { scale: 1.1 },
+  //   whileTap: { scale: 0.9 },
+  // };
 
   return (
     <motion.section
@@ -64,12 +64,12 @@ export default function Biosection() {
           use and easy to maintain.
         </p>
         <motion.a
-          href="https://drive.google.com/file/d/1xE0qbxef5LqeXr3Zl010rwQfJ-rG2-SA/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Y1O5qwNPGPw-qAVIX0ICPvkWUUdi5iG0/view?usp=sharing"
           target="blank_"
-          className=" bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rounded-full flex items-center text-2xl "
-          variants={buttonVarient}
-          whileHover="whileHover"
-          whileTap="whileTap"
+          className=" text-white bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 hover:from-teal-500 hover:to-cyan-500 transition-all duration-200 font-medium px-4 py-2 rounded-full flex items-center text-2xl "
+          // variants={buttonVarient}
+          // whileHover="whileHover"
+          // whileTap="whileTap"
         >
           <motion.div
             animate={{ y: [0, 2, 0] }}
@@ -83,27 +83,27 @@ export default function Biosection() {
           <motion.a
             href="https://github.com/nayan-bagale"
             target="blank"
-            variants={buttonVarient}
-            whileHover="whileHover"
-            whileTap="whileTap"
+            // variants={buttonVarient}
+            // whileHover="whileHover"
+            // whileTap="whileTap"
           >
             <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/nayan-bagale"
             target="blank"
-            variants={buttonVarient}
-            whileHover="whileHover"
-            whileTap="whileTap"
+            // variants={buttonVarient}
+            // whileHover="whileHover"
+            // whileTap="whileTap"
           >
             <FaLinkedinIn className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
           </motion.a>
           <motion.a
             href="https://twitter.com/nayan_bagale"
             target="blank"
-            variants={buttonVarient}
-            whileHover="whileHover"
-            whileTap="whileTap"
+            // variants={buttonVarient}
+            // whileHover="whileHover"
+            // whileTap="whileTap"
           >
             <AiOutlineTwitter className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
           </motion.a>
