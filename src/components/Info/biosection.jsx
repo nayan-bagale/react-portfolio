@@ -64,7 +64,7 @@ export default function Biosection() {
           use and easy to maintain.
         </p>
         <motion.a
-          href="https://drive.google.com/file/d/1Y1O5qwNPGPw-qAVIX0ICPvkWUUdi5iG0/view?usp=sharing"
+          href="https://drive.google.com/file/d/1S0_d_oh0GAezRPr-3ckd0BwuA0RhA7V8/view?usp=sharing"
           target="blank_"
           className=" text-white bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 hover:from-teal-500 hover:to-cyan-500 transition-all duration-200 font-medium px-4 py-2 rounded-full flex items-center text-2xl "
           // variants={buttonVarient}
