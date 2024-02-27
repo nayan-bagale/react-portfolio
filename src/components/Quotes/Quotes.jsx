@@ -249,10 +249,9 @@ const Quotes = () => {
     quotes_data[getRandomNumber(0, quotes_data.length - 1)]
   );
 
-  const newQuote = () =>
-    setQuote(quotes_data[getRandomNumber(0, quotes_data.length - 1)]);
-
   useEffect(() => {
+    const newQuote = () =>
+      setQuote(quotes_data[getRandomNumber(0, quotes_data.length - 1)]);
     const interval = setInterval(newQuote, 10000);
     return () => {
       clearInterval(interval);
