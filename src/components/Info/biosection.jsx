@@ -64,8 +64,9 @@ export default function Biosection() {
           use and easy to maintain.
         </p>
         <motion.a
-          href="https://drive.google.com/file/d/1S0_d_oh0GAezRPr-3ckd0BwuA0RhA7V8/view?usp=sharing"
+          href={process.env.REACT_APP_CV_LINK}
           target="blank_"
+          rel="noreferrer"
           className=" text-white bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 hover:from-teal-500 hover:to-cyan-500 transition-all duration-200 font-medium px-4 py-2 rounded-full flex items-center text-2xl "
           // variants={buttonVarient}
           // whileHover="whileHover"
@@ -83,6 +84,7 @@ export default function Biosection() {
           <motion.a
             href="https://github.com/nayan-bagale"
             target="blank"
+            rel="noreferrer"
             // variants={buttonVarient}
             // whileHover="whileHover"
             // whileTap="whileTap"
@@ -92,6 +94,7 @@ export default function Biosection() {
           <motion.a
             href="https://www.linkedin.com/in/nayan-bagale"
             target="blank"
+            rel="noreferrer"
             // variants={buttonVarient}
             // whileHover="whileHover"
             // whileTap="whileTap"
@@ -101,6 +104,7 @@ export default function Biosection() {
           <motion.a
             href="https://twitter.com/nayan_bagale"
             target="blank"
+            rel="noreferrer"
             // variants={buttonVarient}
             // whileHover="whileHover"
             // whileTap="whileTap"
