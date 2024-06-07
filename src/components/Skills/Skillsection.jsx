@@ -17,15 +17,15 @@ export default function Skills() {
 
   const skillsArray = [
     {
-      title: "Next.js",
-      progress: "75%",
-    },
-    {
-      title: "TypeScript",
+      title: "Nextjs",
       progress: "90%",
     },
     {
-      title: "React.js",
+      title: "TypeScript",
+      progress: "98%",
+    },
+    {
+      title: "Reactjs",
       progress: "95%",
     },
   ];
@@ -33,13 +33,18 @@ export default function Skills() {
   const proficientArray = [
     {
       title: "Front-End",
-      skills: "ES6, React.js, Next.js, Tailwind, JavaScript, HTML5, CSS3",
+      skills: "ES6, React.js, Nextjs, Recoil, Zod, Tailwind, TypeScript, HTML5, CSS3",
     },
     {
       title: "Back-End",
       skills:
-        "Firebase, Node.js, Express.js, MongoDB, MySQL, API, Version Control (e.g. Git) ",
+        "Nodejs, Expressjs, SocketIO, PostgreSQL, MySQL, Docker, Firebase, Version Control (e.g. Git) ",
     },
+    // {
+    //   title: "Other Skills",
+    //   skills:
+    //     "C, Java, Python, Docker, JQuery ",
+    // },
   ];
 
   return (

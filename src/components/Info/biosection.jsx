@@ -1,7 +1,8 @@
-import Image from "../../images/profile-pic.jpg";
+import Image from "../../images/profile-pic2.jpg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { SiLeetcode } from "react-icons/si";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -90,6 +91,16 @@ export default function Biosection() {
             // whileTap="whileTap"
           >
             <AiOutlineGithub className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
+          </motion.a>
+          <motion.a
+            href="https://leetcode.com/u/nayan-bagale/"
+            target="blank"
+            rel="noreferrer"
+            // variants={buttonVarient}
+            // whileHover="whileHover"
+            // whileTap="whileTap"
+          >
+            <SiLeetcode className=" text-4xl text-gray-600 cursor-pointer  md:hover:text-slate-500 md:dark:hover:text-yellow-400 dark:text-white" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/nayan-bagale"

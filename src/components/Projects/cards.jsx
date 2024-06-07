@@ -42,7 +42,7 @@ const Cards = ({ project }) => {
                 </p>
                 {/* <hr className=" w-full h-0.5 mx-auto my-4 bg-teal-400 border-0 rounded md:my-6 dark:bg-yellow-400 " /> */}
                 <div className=" flex w-full justify-between mt-4">
-                  {item.demo ? (
+                  {item.demo && (
                     <motion.a
                       target="blank"
                       href={item.demo}
@@ -54,19 +54,19 @@ const Cards = ({ project }) => {
                       Live Demo
                       {/* <FiExternalLink className=" ml-1" /> */}
                     </motion.a>
-                  ) : (
-                    ""
                   )}
 
-                  <motion.a
-                    target="blank"
-                    href={item.code}
-                    className=" justify-self-end md:text-xl text-base font-bold text-teal-600 dark:border-gray-600 dark:text-teal-600 dark:hover:text-white"
-                    variants={buttonVarient}
-                    whileTap="click"
-                  >
-                    &#60; Code &#47;&#62;
-                  </motion.a>
+                  {item.code && (
+                    <motion.a
+                      target="blank"
+                      href={item.code}
+                      className=" justify-self-end md:text-xl text-base font-bold text-teal-600 dark:border-gray-600 dark:text-teal-600 dark:hover:text-white"
+                      variants={buttonVarient}
+                      whileTap="click"
+                    >
+                      &#60; Code &#47;&#62;
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </div>

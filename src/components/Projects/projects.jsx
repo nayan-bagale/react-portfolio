@@ -3,6 +3,24 @@ import Cards from "./cards";
 
 const projects_info = [
   {
+    name: "Nex-Ed",
+    // img: require("../../images/todo.jpeg"),
+    demo: "https://nex-ed-web.vercel.app/",
+    // code: "https://github.com/nayan-bagale/Quizy-React-App",
+    detail:
+      "NexEd is an advanced virtual classroom platform 👨🏻‍🏫 that enhances online education with real-time communication, automated attendance tracking, and comprehensive analytics 📈. Leveraging Next.js, PostgreSQL, and WebRTC, it supports live video classes and seamless resource 📚 sharing for an interactive learning experience.",
+    tags: [
+      "Nextjs",
+      "PostgreSQL",
+      "WebRTC",
+      "SocketIO",
+      "Tailwind CSS",
+      "TypeScript",
+      "EdgeStore",
+      "MonoRepo",
+    ],
+  },
+  {
     name: "Quizy",
     // img: require("../../images/todo.jpeg"),
     demo: "https://react-quiz-app-nayan-orcin.vercel.app/",
