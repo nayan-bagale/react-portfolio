@@ -1,4 +1,4 @@
-import Image from "../../images/profile-pic2.jpg";
+import Image from "../../images/profile-pic3.jpg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
@@ -36,8 +36,8 @@ export default function Biosection() {
       </div>
 
       <div className=" m-4 p-4 flex flex-col items-start text-left md:w-1/2 md:p-8 md:m-8 ">
-        <h4 className=" dark:text-white text-teal-900 text-xl md:text-2xl text-right inline-flex ">
-          Hi,
+        <div className=" dark:text-white text-teal-900 text-xl md:text-2xl text-right inline-flex ">
+          Hi,{'        '}
           <motion.div
             animate={{ rotate: [0, -20, 0, -20, 0, -20, 0] }}
             transition={{
@@ -47,22 +47,24 @@ export default function Biosection() {
               delay: 1,
             }}
           >
-            👋
+             👋
           </motion.div>
-        </h4>
+        </div>
         <h1 className=" dark:text-white text-3xl md:text-5xl py-2 text-teal-700 font-semibold">
-          I'm Nayan Bagale.
+          I'm Nayan Bagale
         </h1>
         <h3 className=" dark:text-yellow-400 text-xl md:text-3xl text-gray-800">
-          A
+          F
           <TypeAnimation
-            sequence={[` Full Stack Developer.`, 1000, ""]}
+            sequence={[`ull Stack Engineer`, 1000, ""]}
             repeat={Infinity}
           />
         </h3>
         <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-600 lg:w-3/4 ">
-          Developing web applications that are scalable, fast, reliable, easy to
-          use and easy to maintain.
+          {/* Developing web applications that are scalable, fast, reliable, easy to
+          use and easy to maintain. */}
+          Building scalable, fast, and reliable web applications that are easy
+          to use and maintain with modern web technologies.
         </p>
         <motion.a
           href={process.env.REACT_APP_CV_LINK}

@@ -3,7 +3,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import { BsArrowRight } from "react-icons/bs";
-import { AiOutlineStop } from "react-icons/ai";
 import Child from "../Animation/Child";
 import { useTheme } from "../ContexAPI/Theme";
 
@@ -153,9 +152,10 @@ export default function Contactme() {
           <button
             type="submit"
             disabled={!formik.isValid}
-            className=" inline-flex items-center disabled:cursor-not-allowed text-2xl bg-slate-600 text-white p-2 rounded-full"
+            className=" inline-flex items-center disabled:cursor-not-allowed disabled:opacity-40 text-2xl bg-slate-600 text-white p-2 rounded-full"
           >
-            {formik.isValid ? <BsArrowRight /> : <AiOutlineStop />}
+            {/* {formik.isValid ? <BsArrowRight /> : <AiOutlineStop />} */}
+            <BsArrowRight />
           </button>
         </Child>
         <Toaster

@@ -3,10 +3,18 @@ import Cards from "./cards";
 
 const projects_info = [
   {
+    name: "ModernUi",
+    // img: require("../../images/todo.jpeg"),
+    demo: "https://modernui.nayanbagale.me/",
+    detail:
+      " ModernUI is a UI component library built with Next.js, Tailwind CSS, Framer Motion, and TypeScript. It offers modern, animated components that look great and are easy to use. Developers can quickly copy and paste the code to add these components to their projects, saving time and effort while creating sleek, professional designs.",
+    tags: ["NextJs", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  },
+  {
     name: "Nex-Ed",
     // img: require("../../images/todo.jpeg"),
     demo: "https://nex-ed-web.vercel.app/",
-    // code: "https://github.com/nayan-bagale/Quizy-React-App",
+    code: "https://github.com/nayan-bagale/nex-cloud",
     detail:
       "NexEd is an advanced virtual classroom platform 👨🏻‍🏫 that enhances online education with real-time communication, automated attendance tracking, and comprehensive analytics 📈. Leveraging Next.js, PostgreSQL, and WebRTC, it supports live video classes and seamless resource 📚 sharing for an interactive learning experience.",
     tags: [
@@ -55,24 +63,24 @@ const projects_info = [
       "Movie-X 🎞️ is a website that let users search🔎 , for what movie they want to see and the information about the movie like story, actors, director, and genre. Also, user can see the rating⭐.",
     tags: ["React.js", "Tailwind CSS"],
   },
+  // {
+  //   name: "FitGirl",
+  //   // img: require("../../images/fitgirl.jpeg"),
+  //   demo: "https://nayan-bagale.github.io/Fitgirl-Scraper/",
+  //   code: "https://github.com/nayan-bagale/Fitgirl-Scraper",
+  //   detail: `FitGirl is a clone of fitgirl-repacks.site where new recently cracked games 🎮 are available, Users can search 🔎 game's title and filter it by genre, each game card has a link to the fitgirl download page.`,
+  //   tags: [
+  //     "Cheerio",
+  //     "CORS",
+  //     "Node.js",
+  //     "Express.js",
+  //     "JQuery",
+  //     "HTML5",
+  //     "TailwindCSS",
+  //   ],
+  // },
   {
-    name: "FitGirl",
-    // img: require("../../images/fitgirl.jpeg"),
-    demo: "https://nayan-bagale.github.io/Fitgirl-Scraper/",
-    code: "https://github.com/nayan-bagale/Fitgirl-Scraper",
-    detail: `FitGirl is a clone of fitgirl-repacks.site where new recently cracked games 🎮 are available, Users can search 🔎 game's title and filter it by genre, each game card has a link to the fitgirl download page.`,
-    tags: [
-      "Cheerio",
-      "CORS",
-      "Node.js",
-      "Express.js",
-      "JQuery",
-      "HTML5",
-      "TailwindCSS",
-    ],
-  },
-  {
-    name: "Hotel Management System",
+    name: "HMS",
     // img: require("../../images/hotel.jpeg"),
     demo: null,
     code: "https://github.com/nayan-bagale/Hotel-Management-System-MySQL",
@@ -128,17 +136,19 @@ const Projects = () => {
 
       <div className=" md:w-4/5 w-11/12 m-auto flex flex-col items-center">
         <div className=" text-3xl md:text-4xl p-4 mt-4 self-start">
-          <h1 className=" pb-4 text-teal-800 dark:text-white">Projects</h1>
+          <h2 className=" pb-4 text-teal-800 dark:text-white">Projects</h2>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </div>
 
         <Child>
           <div className=" relative rounded my-0 md:w-2/3 md:my-6 p-4 mb-4 m-auto">
             <p className=" dark:text-gray-300 text-base py-3 md:text-2xl md:py-5 leading-6 md:leading-8 text-gray-700">
-              Learning by doing things 🧑🏻‍💻 is the best way to grasp concepts so
-              whenever I learn something I try to build 🏗️ an app to understand
-              its importance and how things have to be configured. Here are some
-              of the personal projects I have worked on in the past 👻.
+              Learning by building 🧑🏻‍💻 is my favorite way to truly understand
+              concepts. Whenever I explore something new, I dive into creating
+              🏗️ an app to grasp its significance and learn how to configure it
+              effectively. Here are some of the personal projects I’ve worked on
+              in the past 👻, each one reflecting a step forward in my journey
+              as a developer.
             </p>
             {/* <div className=" bg-slate-800 opacity-80 rounded-lg w-full h-[100%] absolute top-0 left-0 -z-10 shadow-lg"></div> */}
           </div>

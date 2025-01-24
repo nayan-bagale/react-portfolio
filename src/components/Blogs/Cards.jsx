@@ -8,7 +8,7 @@ const Cards = ({ blogs }) => {
         return (
           <Child key={blog.name}>
             <div class="max-w-lg mx-auto">
-              <div class="bg-emerald-200 border shadow border-none dark:bg-gray-900 rounded-lg max-w-sm mb-5">
+              <div class="bg-emerald-200 border shadow-lg border-none dark:bg-gray-900 rounded-lg max-w-sm mb-5">
                 <a href={blog.link} target="_blank" rel="noreferrer">
                   <img
                     class="rounded-t-lg"
@@ -22,7 +22,7 @@ const Cards = ({ blogs }) => {
                       {blog.name}
                     </h5>
                   </a>
-                  <p class="font-normal text-teal-700 dark:text-teal-400 mb-3">
+                  <p class="font-normal text-sm md:text-base text-teal-700 dark:text-teal-400 mb-3">
                     {blog.detail}
                   </p>
                   <a
