@@ -33,7 +33,7 @@ export default function Skill({ array }) {
         // transition="transition"
       >
         <Child>
-        <div className=" text-2xl md:text-3xl my-2 md:my-4 text-teal-800 dark:text-teal-200">
+        <div className=" text-xl md:text-3xl my-2 md:my-4 text-teal-800 dark:text-teal-200">
           {title}
         </div>
         <div className=" bg-slate-300 rounded-full h-0.5 mb-2 md:mb-4">

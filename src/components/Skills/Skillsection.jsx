@@ -17,34 +17,34 @@ export default function Skills() {
 
   const skillsArray = [
     {
-      title: "Nextjs",
-      progress: "90%",
+      title: "NextJs + ReactJs",
+      progress: "95%",
     },
     {
       title: "TypeScript",
-      progress: "98%",
+      progress: "90%",
     },
     {
-      title: "Reactjs",
-      progress: "95%",
+      title: "Nodejs",
+      progress: "85%",
     },
   ];
 
   const proficientArray = [
     {
       title: "Front-End",
-      skills: "ES6, React.js, Nextjs, Recoil, Zod, Tailwind, TypeScript, HTML5, CSS3",
+      skills: "ReactJs, NextJs, Redux, TailwindCSS, TypeScript, HTML5, CSS3, JavaScript, ES6",
     },
     {
       title: "Back-End",
       skills:
-        "Nodejs, Expressjs, SocketIO, PostgreSQL, MySQL, Docker, Firebase, Version Control (e.g. Git) ",
+        "Nodejs, Expressjs, SocketIO, PostgreSQL, MySQL, Git, C++, Python ",
     },
-    // {
-    //   title: "Other Skills",
-    //   skills:
-    //     "C, Java, Python, Docker, JQuery ",
-    // },
+    {
+      title: "Tools /Platforms",
+      skills:
+        "Docker, AWS, Git, GitHub, GitLab, Postman, Vercel, Firebase",
+    },
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function Skills() {
         </Parent>
       </div>
       <Profient array={proficientArray} />
-      <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
+      <div className=" text-3xl md:text-4xl p-4 my-4 mt-6 self-start">
         <Parent>
           <h1 className=" pb-4 text-teal-800 dark:text-white">Skills</h1>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>

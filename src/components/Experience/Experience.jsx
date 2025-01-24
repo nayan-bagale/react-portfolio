@@ -1,7 +1,36 @@
+import classNames from "classnames";
 import Child from "../Animation/Child";
 // import { motion } from "framer-motion";
 
 function Experience() {
+
+  const experience = [
+    {
+      designation: "Full Stack Engineer",
+      company: "CloudOptimo",
+      date: "Aug 2024 - Present",
+      title: "Full Time",
+      description: [
+        "Delivered faster, scalable applications by transitioning React apps to Next.js, boosting performance and scalability.",
+        "Improved user experience by reducing page loading times to under 1 second.",
+        "Boosted website performance and SEO scores to 100% on Lighthouse, making the site easier to find through improved search rankings and faster page loads.",
+        "Collaborated with cross-functional teams to deliver robust applications aligned with business objectives.",
+      ],
+    },
+    {
+      designation: "Full Stack Engineer",
+      company: "Edifition",
+      date: "Aug 2023 - Feb 2024",
+      title: "Intern",
+      description: [
+        "Collaborated with a team to develop a comprehensive webpage using Next.js, APIs, Tailwind CSS, React.js, and Framer Motion.",
+        "Streamlined content updates by incorporating a CMS into the project.",
+        "Set up a PostgreSQL database using Drizzle ORM.",
+        "Optimized application performance, resulting in a 2x improvement.",
+      ],
+    },
+  ];
+
   return (
     <section
       className=" relative min-h-fit bg-white/80 dark:bg-slate-800/80 flex flex-col w-full items-center my-20 pb-10"
@@ -50,13 +79,13 @@ function Experience() {
           <h1 className=" pb-4 text-teal-800 dark:text-white">Experience</h1>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </div>
-        <div className=" relative flex flex-col w-4/5 my-4 md:w-2/3 md:my-6">
+        <div className=" relative gap-10 flex flex-col w-[85%] my-4 md:w-2/3 md:my-6">
           {/* Side line */}
-          <div className=" absolute border-l h-full -left-2 top-0 border-l-teal-800 dark:border-l-white"></div>
+          <div className=" absolute border-l-2 h-full -left-2 top-0 border-l-teal-800 dark:border-yellow-400"></div>
           {/* End */}
 
           {/* Experience Info Card */}
-          <Child>
+          {/* <Child>
             <div className=" rounded-3xl relative flex flex-col gap-2 md:gap-4 text-white ml-4 md:ml-8 p-6 md:p-12 w-fit dark:bg-gray-900 bg-emerald-200">
               <div className=" p-4 md:p-6 dark:bg-gray-900 bg-emerald-200 absolute rotate-45 left-[-0.9rem] md:left-[-1.5rem] top-[10%] md:top-[15%]"></div>
 
@@ -77,7 +106,8 @@ function Experience() {
               </h2>
               <ul className="list-disc text-xs flex flex-col gap-1 md:text-base md:leading-6 text-teal-700 dark:text-teal-400">
                 <li>
-                  Collaborated with a team to develop a comprehensive webpage <br />
+                  Collaborated with a team to develop a comprehensive webpage{" "}
+                  <br />
                   using Next.js, APIs, Tailwind CSS, React.js, and Framer
                   Motion.
                 </li>
@@ -92,7 +122,42 @@ function Experience() {
                 </li>
               </ul>
             </div>
-          </Child>
+          </Child> */}
+          {experience.map((exp, index) => (
+            <Child key={exp.date}>
+              <div className=" rounded-3xl relative flex flex-col gap-2 md:gap-4 text-white ml-4 md:ml-8 p-6 md:p-12 w-fit dark:bg-gray-900 bg-emerald-200">
+                <div className=" p-4 md:p-6 dark:bg-gray-900 bg-emerald-200 absolute rotate-45 left-[-0.9rem] md:left-[-1.5rem] top-[10%] md:top-[15%]"></div>
+
+                <h3
+                  className={classNames(
+                    " italic text-xl md:text-2xl absolute  top-[30%] -rotate-90 text-teal-700 dark:text-teal-400",
+                    index === 1
+                      ? "left-[-3.9rem] md:left-[-5.2rem]"
+                      : "left-[-4.9rem] md:left-[-6.2rem]"
+                  )}
+                >
+                  {exp.title}
+                </h3>
+
+                <div className=" flex gap-4 flex-col md:flex-row md:items-center justify-between">
+                  <h1 className=" w-fit text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200 dark:bg-gray-800 bg-emerald-100 p-1 px-2 rounded-3xl">
+                    {exp.company}
+                  </h1>
+                  <h3 className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200 ">
+                    {exp.date}
+                  </h3>
+                </div>
+                <h2 className=" text-2xl md:text-4xl text-teal-800 font-semibold dark:text-teal-200">
+                  {exp.designation}
+                </h2>
+                <ul className="list-disc text-xs flex flex-col gap-1 md:text-base md:leading-6 text-teal-700 dark:text-teal-400">
+                  {exp.description.map((desc, index) => (
+                    <li key={index}>{desc}</li>
+                  ))}
+                </ul>
+              </div>
+            </Child>
+          ))}
           {/* End */}
         </div>
       </div>
