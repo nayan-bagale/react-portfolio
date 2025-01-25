@@ -43,7 +43,7 @@ export default function Profient({ array }) {
                 className=" flex items-center justify-between text-teal-800 cursor-pointer relative dark:text-teal-200"
                 onClick={() => handleClick(index)}
               >
-                <h1 className=" text-xl md:text-3xl">{title}</h1>
+                <h3 className=" text-xl md:text-3xl">{title}</h3>
                 <motion.div
                   whileInView={
                     collapsetoggle !== index

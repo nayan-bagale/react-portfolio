@@ -54,16 +54,16 @@ export default function Skills() {
     >
       <div className="text-3xl md:text-4xl p-4 my-4 self-start">
         <Parent>
-          <h1 className=" pb-4 text-teal-800 dark:text-white">
+          <h2 className=" pb-4 text-teal-800 dark:text-white">
             I’m proficient at
-          </h1>
+          </h2>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </Parent>
       </div>
       <Profient array={proficientArray} />
       <div className=" text-3xl md:text-4xl p-4 my-4 mt-6 self-start">
         <Parent>
-          <h1 className=" pb-4 text-teal-800 dark:text-white">Skills</h1>
+          <h2 className=" pb-4 text-teal-800 dark:text-white">Skills</h2>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </Parent>
       </div>

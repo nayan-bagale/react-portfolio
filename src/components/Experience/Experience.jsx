@@ -76,7 +76,7 @@ function Experience() {
 
       <div className="relative flex flex-col items-center md:w-4/5 w-11/12 m-auto">
         <div className="text-3xl md:text-4xl p-4 my-4 self-start">
-          <h1 className=" pb-4 text-teal-800 dark:text-white">Experience</h1>
+          <h2 className=" pb-4 text-teal-800 dark:text-white">Experience</h2>
           <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
         </div>
         <div className=" relative gap-20 flex flex-col w-[85%] my-4 md:w-2/3 md:my-6">
@@ -140,12 +140,12 @@ function Experience() {
                 </h3>
 
                 <div className=" flex gap-4 flex-col md:flex-row md:items-center justify-between">
-                  <h1 className=" w-fit text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200 dark:bg-gray-800 bg-emerald-100 p-1 px-2 rounded-xl ">
+                  <h3 className=" w-fit text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200 dark:bg-gray-800 bg-emerald-100 p-1 px-2 rounded-xl ">
                     {exp.company}
-                  </h1>
-                  <h3 className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200 ">
-                    {exp.date}
                   </h3>
+                  <div className=" text-sm md:text-base italic text-teal-800 dark:text-teal-200 ">
+                    {exp.date}
+                  </div>
                 </div>
                 <h2 className=" text-2xl md:text-4xl text-teal-800 font-semibold dark:text-teal-200">
                   {exp.designation}

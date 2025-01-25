@@ -33,9 +33,9 @@ export default function Skill({ array }) {
         // transition="transition"
       >
         <Child>
-        <div className=" text-xl md:text-3xl my-2 md:my-4 text-teal-800 dark:text-teal-200">
+        <h3 className=" text-xl md:text-3xl my-2 md:my-4 text-teal-800 dark:text-teal-200">
           {title}
-        </div>
+        </h3>
         <div className=" bg-slate-300 rounded-full h-0.5 mb-2 md:mb-4">
           <motion.div
             className=" bg-teal-800 h-0.5 rounded-full relative dark:bg-yellow-400"

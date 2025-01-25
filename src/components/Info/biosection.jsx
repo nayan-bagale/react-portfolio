@@ -53,13 +53,13 @@ export default function Biosection() {
         <h1 className=" dark:text-white text-3xl md:text-5xl py-2 text-teal-700 font-semibold">
           I'm Nayan Bagale
         </h1>
-        <h3 className=" dark:text-yellow-400 text-xl md:text-3xl text-gray-800">
+        <h1 className=" dark:text-yellow-400 text-xl md:text-3xl text-gray-800">
           F
           <TypeAnimation
             sequence={[`ull Stack Engineer`, 1000, ""]}
             repeat={Infinity}
           />
-        </h3>
+        </h1>
         <p className=" dark:text-gray-300 text-base py-3 md:text-xl md:py-5 leading-8 text-gray-600 lg:w-3/4 ">
           {/* Developing web applications that are scalable, fast, reliable, easy to
           use and easy to maintain. */}

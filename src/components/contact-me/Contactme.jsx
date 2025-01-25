@@ -65,7 +65,7 @@ export default function Contactme() {
       className=" relative min-h-screen lg:w-3/5 md:w-4/5 w-11/12 m-auto flex flex-col items-center justify-center dark:text-white"
     >
       <div className=" text-3xl md:text-4xl p-4 my-4 self-start">
-        <h1 className=" pb-4 text-teal-800 dark:text-white">Contact</h1>
+        <h2 className=" pb-4 text-teal-800 dark:text-white">Contact</h2>
         <div className=" border w-[18%] border-teal-700 dark:border-yellow-400"></div>
       </div>
 
