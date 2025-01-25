@@ -13,7 +13,6 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function Contactme() {
   const { theme } = useTheme();
-  
   const form = useRef();
   
   const sendEmail = async (e) => {
@@ -21,20 +20,18 @@ export default function Contactme() {
     const toastId = toast.loading('Sending...');
     emailjs
       .sendForm(
-        "service_gmchrbj",
+        "service_ekkibmb",
         "template_ch99kya",
         form.current,
-        "PBQ0fRnDn6iDGd0cY"
+        process.env.REACT_APP_EMAIL_JS_KEY
       )
       .then(
         (result) => {
-          console.log(result);
           toast.success("Succeed", {
             id: toastId,
           });
         },
         (error) => {
-          console.log(error.text);
           toast.error("Internal Error Occure", {
             id: toastId,
           });
