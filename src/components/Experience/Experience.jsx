@@ -11,10 +11,14 @@ function Experience() {
       date: "Aug 2024 - Present",
       title: "Full Time",
       description: [
-        "Delivered faster, scalable applications by transitioning React apps to Next.js, boosting performance and scalability.",
-        "Improved user experience by reducing page loading times to under 1 second.",
-        "Boosted website performance and SEO scores to 100% on Lighthouse, making the site easier to find through improved search rankings and faster page loads.",
-        "Collaborated with cross-functional teams to deliver robust applications aligned with business objectives.",
+        "Rewrote a React application in Next.js to optimize performance and scalability.",
+        "Developed a highly reactive react app for managing work order flows with real-time status tracking, dynamic team assignments, and secure file upload, preview, and download functionality.",
+        "Integrated Keylock authentication and implemented role-based access control for team-specific visibility.",
+        "Developed automated scripts for scraping AWS pricing data to aid in cost analysis, and built a separate server status checker to monitor uptime and trigger alerts, improving infrastructure visibility and reliability."
+        // "Delivered faster, scalable applications by transitioning React apps to Next.js, boosting performance and scalability.",
+        // "Improved user experience by reducing page loading times to under 1 second.",
+        // "Boosted website performance and SEO scores to 100% on Lighthouse, making the site easier to find through improved search rankings and faster page loads.",
+        // "Collaborated with cross-functional teams to deliver robust applications aligned with business objectives.",
       ],
     },
     {

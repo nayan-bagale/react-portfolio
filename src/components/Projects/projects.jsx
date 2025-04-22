@@ -3,6 +3,13 @@ import Cards from "./cards";
 
 const projects_info = [
   {
+    name: "Skydock",
+    demo: "https://skydock.nayanbagale.me/",
+    code: "https://github.com/nayan-bagale/SkyDock",
+    detail: "🖥️ SkyDock is a macOS-inspired web app that brings the desktop experience to your browser. ✨ Featuring draggable apps, a 🗂️ nested file system, and smooth UI powered by React, TypeScript, Tailwind CSS, and Framer Motion. ☁️ Files are securely stored using AWS S3, and the app is deployed on EC2 for reliable performance. 🔧 SkyDock offers an intuitive, desktop-like interface for seamless app interaction and file management—right in your browser.",
+    tags: ["AWS EC2", "AWS S3", "TypeScript", "Reactjs", "Expressjs", "PostgreSQL", "Tailwind CSS", "Framer Motion", "Turborepo"],
+  },
+  {
     name: "ModernUi",
     // img: require("../../images/todo.jpeg"),
     demo: "https://modernui.nayanbagale.me/",
@@ -14,7 +21,7 @@ const projects_info = [
     name: "Nex-Ed",
     // img: require("../../images/todo.jpeg"),
     demo: "https://nex-ed-web.vercel.app/",
-    code: "https://github.com/nayan-bagale/nex-cloud",
+    code: "https://github.com/nayan-bagale/nex-ed",
     detail:
       "NexEd is an advanced virtual classroom platform 👨🏻‍🏫 that enhances online education with real-time communication, automated attendance tracking, and comprehensive analytics 📈. Leveraging Next.js, PostgreSQL, and WebRTC, it supports live video classes and seamless resource 📚 sharing for an interactive learning experience.",
     tags: [
