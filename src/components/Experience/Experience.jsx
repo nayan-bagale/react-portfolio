@@ -3,18 +3,31 @@ import Child from "../Animation/Child";
 // import { motion } from "framer-motion";
 
 function Experience() {
-
   const experience = [
+    {
+      designation: "Software Engineer",
+      company: "CentraLogic",
+      date: "Sep 2025 - Present",
+      title: "Full Time",
+      desciption: [],
+    },
     {
       designation: "Full Stack Engineer",
       company: "CloudOptimo",
-      date: "Aug 2024 - Present",
+      date: "Aug 2024 - Sep 2025",
       title: "Full Time",
       description: [
-        "Rewrote a React application in Next.js to optimize performance and scalability.",
-        "Developed a highly reactive react app for managing work order flows with real-time status tracking, dynamic team assignments, and secure file upload, preview, and download functionality.",
-        "Integrated Keylock authentication and implemented role-based access control for team-specific visibility.",
-        "Developed automated scripts for scraping AWS pricing data to aid in cost analysis, and built a separate server status checker to monitor uptime and trigger alerts, improving infrastructure visibility and reliability."
+        "Architected and built a scalable web app using the Carbon Design System, ensuring consistency, accessibility, and performance.",
+        "Engineered a Document Management System with real-time status tracking, team assignments, and secure file handling.",
+        "Integrated Keycloak authentication and RBAC for secure, role-based access.",
+        "Collaborated with backend developers using Java and MySQL to ensure smooth data integration.",
+        "Migrated an app to Next.js, improving scalability, SEO, and load performance.",
+        "Built a cost calculator tool for AWS EC2 and Azure VMs, helping teams analyze and optimize cloud expenses.",
+
+        // "Rewrote a React application in Next.js to optimize performance and scalability.",
+        // "Developed a highly reactive react app for managing work order flows with real-time status tracking, dynamic team assignments, and secure file upload, preview, and download functionality.",
+        // "Integrated Keylock authentication and implemented role-based access control for team-specific visibility.",
+        // "Developed automated scripts for scraping AWS pricing data to aid in cost analysis, and built a separate server status checker to monitor uptime and trigger alerts, improving infrastructure visibility and reliability."
         // "Delivered faster, scalable applications by transitioning React apps to Next.js, boosting performance and scalability.",
         // "Improved user experience by reducing page loading times to under 1 second.",
         // "Boosted website performance and SEO scores to 100% on Lighthouse, making the site easier to find through improved search rankings and faster page loads.",
@@ -128,21 +141,20 @@ function Experience() {
             </div>
           </Child> */}
           {experience.map((exp, index) => (
-            <Child key={exp.date}>
-              <div className=" rounded-3xl relative flex flex-col gap-2 md:gap-4 text-white ml-4 md:ml-8 p-6 md:p-12 w-fit dark:bg-gray-900 bg-emerald-200">
+            <Child key={index}>
+              <div className=" rounded-3xl relative flex flex-col gap-2 md:gap-4 text-white ml-4 md:ml-8 p-6 md:p-12 dark:bg-gray-900 bg-emerald-200">
                 <div className=" p-4 md:p-6 dark:bg-gray-900 bg-emerald-200 absolute rotate-45 left-[-0.9rem] md:left-[-1.5rem] top-[10%] md:top-[15%]"></div>
-
                 <h3
                   className={classNames(
                     " italic text-xl md:text-2xl absolute  top-[30%] -rotate-90 text-teal-700 dark:text-teal-400",
-                    index === 1
-                      ? "left-[-3.9rem] md:left-[-5.2rem]"
+                    index === 2
+                      ? 
+                      "left-[-3.9rem] md:left-[-5.2rem]"
                       : "left-[-4.9rem] md:left-[-6.2rem]"
                   )}
                 >
                   {exp.title}
                 </h3>
-
                 <div className=" flex gap-4 flex-col md:flex-row md:items-center justify-between">
                   <h3 className=" w-fit text-xl md:text-2xl text-teal-800 font-bold dark:text-teal-200 dark:bg-gray-800 bg-emerald-100 p-1 px-2 rounded-xl ">
                     {exp.company}
@@ -155,7 +167,7 @@ function Experience() {
                   {exp.designation}
                 </h2>
                 <ul className="list-disc text-xs flex flex-col gap-1 md:text-base md:leading-6 text-teal-700 dark:text-teal-400">
-                  {exp.description.map((desc, index) => (
+                  {exp.description?.map((desc, index) => (
                     <li key={index}>{desc}</li>
                   ))}
                 </ul>
